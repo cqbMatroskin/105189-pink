@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Александр Максименков](https://up.htmlacademy.ru/adaptive/6/user/105189).
-* Наставник: `Неизвестно`.
+* Наставник: `Андрей Захарченко`(https://htmlacademy.ru/profile/drewtsure).
 
 ---
 
