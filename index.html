@@ -1,12 +1,157 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Пинк</title>
+</head>
 
-  </body>
+<body>
+  <header class="main-header">
+    <div class="wrap">
+      <div class="main-header__logo">
+        <img src="http://goo.gl/T5bSWm" width="150" height="100" alt="Logo">
+      </div>
+      <nav class="main-nav">
+        <div class="main-nav__toogle main-nav__toogle--closed"></div>
+        <div class="main-nav__wrapper main-nav__wrapper--closed">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">информация</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">возможности</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">отзывы</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">стоимость</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="main-header__title">Взгляните на жизнь иначе!</div>
+      <div class="header-iphone">
+        <div class="header-iphone__screen">
+          <img src="http://goo.gl/T5bSWm" width="150" height="100" alt="Iphone-screen">
+        </div>
+      </div>
+    </div>
+    <article class="application">
+      <a class="btn-transparent btn-transparent--download" href="#">Скачать приложение</a>
+      <div class="os-icons">
+        <a class="os-icons__link" href="#">
+          <img src="http://goo.gl/T5bSWm" width="150" height="100" alt="appstore">
+        </a>
+        <a class="os-icons__link" href="#">
+          <img src="http://goo.gl/T5bSWm" width="150" height="100" alt="google play">
+        </a>
+        <a class="os-icons__link" href="#">
+          <img src="http://goo.gl/T5bSWm" width="150" height="100" alt="windows phone apps">
+        </a>
+      </div>
+      <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+    </article>
+  </header>
+  <article class="promo">
+    <div class="wrap">
+      <h1 class="promo__title">
+        Устали от серости мегаполиса? <br>
+        Нам есть, что вам предложить!
+      </h1>
+      <section class="promo-slogan">
+        <h2 class="promo-slogan__title">Поднимает настроение</h2>
+        <p class="promo-slogan__text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+      </section>
+      <section class="promo-slogan">
+        <h2 class="promo-slogan__title">Меняет мир вокруг</h2>
+        <p class="promo-slogan__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+      </section>
+      <section class="promo-slogan">
+        <h2 class="promo-slogan__title">Заводит новых друзей</h2>
+        <p class="promo-slogan__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+      </section>
+      <img class="promo__iphone" src="http://goo.gl/T5bSWm" width="150" height="100" alt="Iphone">
+    </div>
+  </article>
+  <section class="reviews">
+    <div class="wrap">
+      <div class="reviews__items">
+        <div class="reviews__slide">
+          <strong class="reviews__name">Николай Петров</strong>
+          <p class="reviews__text">
+            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+          </p>
+        </div>
+        <div class="slider-controls">
+          <input class="slider-controls__item" id="btn1" name="toogle" type="radio" checked>
+          <input class="slider-controls__item" id="btn2" name="toogle" type="radio">
+          <input class="slider-controls__item" id="btn3" name="toogle" type="radio">
+          <label class="slider-controls__button" for="btn1"></label>
+          <label class="slider-controls__button" for="btn2"></label>
+          <label class="slider-controls__button" for="btn3"></label>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="price-list">
+    <div class="wrap">
+      <table cellpadding="4">
+        <tr align="center">
+          <th colspan="2">стандарт</th>
+        </tr>
+        <tr align="center">
+          <td colspan="2">3,99 USD</td>
+        </tr>
+        <tr align="center">
+          <td>розовый фильтр</td>
+          <td></td>
+          <!--фон через background-->
+        </tr>
+        <tr align="center">
+          <td>смайлики</td>
+          <td></td>
+          <!--фон через background-->
+        </tr>
+        <tr align="center">
+          <td>комментарии</td>
+          <td></td>
+          <!--фон через background-->
+        </tr>
+      </table>
+      <div class="slider-controls">
+        <input class="slider-controls__item" id="btn1" name="toogle" type="radio" checked>
+        <input class="slider-controls__item" id="btn2" name="toogle" type="radio">
+        <input class="slider-controls__item" id="btn3" name="toogle" type="radio">
+        <label class="slider-controls__button" for="btn1"></label>
+        <label class="slider-controls__button" for="btn2"></label>
+        <label class="slider-controls__button" for="btn3"></label>
+      </div>
+    </div>
+  </div>
+  <article class="contacts">
+    <div class="wrap">
+      <h1 class="contacts__title">
+      Остались вопросы? <br>
+      Свяжитесь с нами!
+    </h1>
+      <section class="contacts__items">
+        <h2>Звоните:</h2>
+        <p>+7 (812) 555-66-66</p>
+      </section>
+      <section class="contacts__items">
+        <h2>Пишите:</h2>
+        <p>mail@htmlacademy.ru</p>
+      </section>
+      <section class="contacts__items">
+        <h2>Приезжайте в гости:</h2>
+        <p>ул. Большая Конюшенная, 19/8</p>
+      </section>
+  </article>
+  </div>
+  <div class="map" id="google-map"></div>
+  <!---ID для Google API-->
+</body>
+
 </html>
