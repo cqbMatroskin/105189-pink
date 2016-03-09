@@ -4,10 +4,16 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
+  <style>
+.map {
+  min-height: 300px;
+}
+  </style>
 </head>
 
 <body>
   <header class="main-header">
+    <div class="main-header__wrap">
       <div class="main-header__logo">
         <img src="http://goo.gl/T5bSWm" width="150" height="100" alt="Logo">
       </div>
@@ -34,23 +40,25 @@
       <div class="header-iphone">
         <img src="http://goo.gl/T5bSWm" width="150" height="100" alt="Iphone-screen">
       </div>
-    <section class="application">
-      <a class="btn-transparent application__btn" href="#">Скачать приложение</a>
-      <div class="application__icons">
-        <a class="application__link" href="#">
-          <img src="http://goo.gl/T5bSWm" width="150" height="100" alt="appstore">
-        </a>
-        <a class="application__link" href="#">
-          <img src="http://goo.gl/T5bSWm" width="150" height="100" alt="google play">
-        </a>
-        <a class="application__link" href="#">
-          <img src="http://goo.gl/T5bSWm" width="150" height="100" alt="windows phone apps">
-        </a>
-      </div>
-      <div>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</div>
-    </section>
+      <section class="application">
+        <a class="btn-transparent application__btn" href="#">Скачать приложение</a>
+        <div class="application__icons">
+          <a class="application__link" href="#">
+            <img src="http://goo.gl/T5bSWm" width="150" height="100" alt="appstore">
+          </a>
+          <a class="application__link" href="#">
+            <img src="http://goo.gl/T5bSWm" width="150" height="100" alt="google play">
+          </a>
+          <a class="application__link" href="#">
+            <img src="http://goo.gl/T5bSWm" width="150" height="100" alt="windows phone apps">
+          </a>
+        </div>
+        <div>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</div>
+      </section>
+    </div>
   </header>
   <section class="promo">
+    <div class="promo__wrap">
       <h1 class="promo__title">
         Устали от серости мегаполиса? <br>
         Нам есть, что вам предложить!
@@ -68,8 +76,10 @@
         <p class="promo-slogan__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
       </article>
       <img class="promo__iphone" src="http://goo.gl/T5bSWm" width="150" height="100" alt="Iphone">
+    </div>
   </section>
   <section class="reviews">
+    <div class="reviews__wrap">
       <div class="reviews__items">
         <article class="reviews__slide">
           <h3 class="reviews__name">Николай Петров</h3>
@@ -98,11 +108,15 @@
           <label class="slider-controls__button" for="btn3"></label>
         </div>
       </div>
+    </div>
   </section>
   <section class="price-list">
+    <div class="price-list__wrap">
       <table class="price-list__table">
         <tr class="price-list__tr">
-          <th colspan="2"><div class="price-list__hit">стандарт</div></th>
+          <th colspan="2">
+            <div class="price-list__hit">стандарт</div>
+          </th>
         </tr>
         <tr class="price-list__tr">
           <td colspan="2">3,99 USD</td>
@@ -131,28 +145,51 @@
         <label class="slider-controls__button" for="btn2"></label>
         <label class="slider-controls__button" for="btn3"></label>
       </div>
+    </div>
   </section>
   <section class="contacts">
+    <div class="contacts__wrap">
       <h2 class="contacts__title">
       Остались вопросы? <br>
       Свяжитесь с нами!
     </h2>
       <div class="contacts__items">
-        <h3>Звоните:</h3>
-        +7 (812) 555-66-66
+        <h3>Звоните:</h3> +7 (812) 555-66-66
       </div>
       <div class="contacts__items">
         <h3>Пишите:</h3>
         <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
       </div>
       <div class="contacts__items">
-        <h3>Приезжайте в гости:</h3>
-        ул. Большая Конюшенная, 19/8
+        <h3>Приезжайте в гости:</h3> ул. Большая Конюшенная, 19/8
       </div>
+    </div>
   </section>
 
   <div class="map" id="google-map"></div>
   <!---ID для Google API-->
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+  <script>
+    function initialize() {
+      var mapOptions = {
+        zoom: 16,
+        center: new google.maps.LatLng(59.936278, 30.320935),
+        disableDefaultUI: true,
+        scrollwheel: false,
+      }
+
+      var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
+      var image = "http://goo.gl/T5bSWm";
+      var myLatLng = new google.maps.LatLng(59.936278, 30.320935);
+
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        icon: image
+      });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
 </body>
 
 </html>
