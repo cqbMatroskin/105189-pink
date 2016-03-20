@@ -1,0 +1,11 @@
+@media #{$mobile} {
+  .effect {
+    display: none;
+  }
+}
+
+.effect {
+  &__wrap {
+    @include wrap;
+  }
+}

@@ -1,3 +1,16 @@
 .reviews {
-  @include outline;
+  &__wrap {
+    @include wrap;
+  }
+}
+
+.reviews__slide {
+  display: flex;
+  flex-flow: column wrap;
+
+  text-align: center;
+}
+
+.reviews__text {
+  margin-top: 0;
 }

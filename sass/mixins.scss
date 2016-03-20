@@ -1,3 +1,46 @@
 @mixin outline() {
   outline: 1px solid red;
 }
+
+@mixin clearfix {
+  &:after {
+    content: "";
+
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+     -moz-transform: $property;
+      -ms-transform: $property;
+       -o-transform: $property;
+          transform: $property;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+
+      -ms-border-radius: $radius;
+}
+
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model;
+     -moz-box-sizing: $box-model;
+          box-sizing: $box-model;
+}
+
+@mixin wrap {
+  width: 87.5%;
+  margin: 0 auto;
+
+  @media #{$tablet} {
+    width: 88.5%;
+  }
+  @media #{$desktop} {
+    width: 78.33333%;
+  }
+}

@@ -1,3 +1,17 @@
 .btn-transparent {
-  @include outline;
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+  padding: 15px 0;
+
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  color: $white;
+  text-decoration: none;
+
+  background-color: transparent;
+  border: 3px solid $white;
+
+  @include border-radius(30px);
 }

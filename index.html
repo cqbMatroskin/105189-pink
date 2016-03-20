@@ -6,57 +6,56 @@
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-.map {
-  min-height: 300px;
-}
+    .map {
+      min-height: 300px;
+    }
   </style>
 </head>
 
 <body>
   <header class="main-header">
-    <div class="main-header__wrap">
-      <div class="main-header__logo">
-        <img src="http://goo.gl/T5bSWm" width="150" height="100" alt="Logo">
+    <nav class="main-nav">
+      <div class="main-nav__wrapper ">
+        <a class="main-header__logo" href="index.html"></a>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">фотографии</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">конкурс</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">html academy</a>
+          </li>
+        </ul>
+        <div class="main-nav__toggle main-nav__toggle--closed"></div>
       </div>
-      <nav class="main-nav">
-        <div class="main-nav__toogle main-nav__toogle--closed"></div>
-        <div class="main-nav__wrapper main-nav__wrapper--closed">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">информация</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">возможности</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">отзывы</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">стоимость</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+    </nav>
+    <div class="main-header__wrap">
       <h1 class="main-header__title">Взгляните на жизнь иначе!</h1>
       <div class="header-iphone">
-        <img src="http://goo.gl/T5bSWm" width="150" height="100" alt="Iphone-screen">
       </div>
-      <section class="application">
+    </div>
+    <section class="application">
+      <div class="main-header__wrap">
         <a class="btn-transparent application__btn" href="#">Скачать приложение</a>
         <div class="application__icons">
           <a class="application__link" href="#">
-            <img src="http://goo.gl/T5bSWm" width="150" height="100" alt="appstore">
+            <img src="img/logo-apple.svg" alt="appstore">
           </a>
           <a class="application__link" href="#">
-            <img src="http://goo.gl/T5bSWm" width="150" height="100" alt="google play">
+            <img src="img/logo-android.svg" alt="google play">
           </a>
           <a class="application__link" href="#">
-            <img src="http://goo.gl/T5bSWm" width="150" height="100" alt="windows phone apps">
+            <img src="img/logo-microsoft.svg" alt="windows phone apps">
           </a>
         </div>
         <div>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</div>
-      </section>
-    </div>
+      </div>
+    </section>
   </header>
   <section class="promo">
     <div class="promo__wrap">
@@ -64,19 +63,33 @@
         Устали от серости мегаполиса? <br>
         Нам есть, что вам предложить!
       </h1>
-      <article class="promo__item">
-        <h3 class="promo__item-title">Поднимает настроение</h3>
-        <p class="promo__slogan-text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
-      </article>
-      <article class="promo__item">
-        <h3 class="promo__item-title">Меняет мир вокруг</h3>
-        <p class="promo__slogan-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-      </article>
-      <article class="promo__item">
-        <h3 class="promo__item-title">Заводит новых друзей</h3>
-        <p class="promo__slogan-text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-      </article>
-      <img class="promo__iphone" src="http://goo.gl/T5bSWm" width="150" height="100" alt="Iphone">
+      <div class="promo__items">
+        <article class="promo__item">
+          <h3 class="promo__item-title">Поднимает настроение</h3>
+          <p class="promo__slogan-text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+        </article>
+        <article class="promo__item">
+          <h3 class="promo__item-title">Меняет мир вокруг</h3>
+          <p class="promo__slogan-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+        </article>
+        <article class="promo__item">
+          <h3 class="promo__item-title">Заводит новых друзей</h3>
+          <p class="promo__slogan-text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+        </article>
+        <div class="promo__iphone"></div>
+      </div>
+    </div>
+  </section>
+  <section class="effect">
+    <div class="effect__wrap">
+      <div class="effect__timer"></div>
+      <h4 class="effect__title">
+        Эффект на 24 часа!
+      </h4>
+      <p class="effect__text">
+        Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+         <a href="">Узнать больше об исследовании</a>
+      </p>
     </div>
   </section>
   <section class="reviews">
@@ -101,9 +114,9 @@
           </p>
         </article>
         <div class="slider-controls">
-          <input class="slider-controls__item" id="btn1" name="toogle" type="radio" checked>
-          <input class="slider-controls__item" id="btn2" name="toogle" type="radio">
-          <input class="slider-controls__item" id="btn3" name="toogle" type="radio">
+          <input class="slider-controls__item" id="btn1" name="toggle" type="radio" checked>
+          <input class="slider-controls__item" id="btn2" name="toggle" type="radio">
+          <input class="slider-controls__item" id="btn3" name="toggle" type="radio">
           <label class="slider-controls__button" for="btn1"></label>
           <label class="slider-controls__button" for="btn2"></label>
           <label class="slider-controls__button" for="btn3"></label>
@@ -139,9 +152,9 @@
         </tr>
       </table>
       <div class="slider-controls">
-        <input class="slider-controls__item" id="btn1" name="toogle" type="radio" checked>
-        <input class="slider-controls__item" id="btn2" name="toogle" type="radio">
-        <input class="slider-controls__item" id="btn3" name="toogle" type="radio">
+        <input class="slider-controls__item" id="btn1" name="toggle" type="radio" checked>
+        <input class="slider-controls__item" id="btn2" name="toggle" type="radio">
+        <input class="slider-controls__item" id="btn3" name="toggle" type="radio">
         <label class="slider-controls__button" for="btn1"></label>
         <label class="slider-controls__button" for="btn2"></label>
         <label class="slider-controls__button" for="btn3"></label>

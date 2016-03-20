@@ -1,3 +1,74 @@
 .main-header {
-  @include outline;
+  background: $dark-blue url("../img/bg-back-mobile.jpg") no-repeat center center;
+  background-size: cover;
+
+  &__wrap {
+    position: relative;
+
+    @include wrap;
+  }
+}
+.main-header__logo {
+  width: 75px;
+  height: 22px;
+
+  background: url("../img/logo-pink-white-mobile.svg") no-repeat center center;
+}
+
+.main-header__title {
+  display: none;
+  width: 300px;
+  padding: 0 30px;
+
+  font-weight: 300;
+  font-size: $tablet-title;
+  line-height: 46px;
+  text-align: center;
+  color: $white;
+
+  @include box-sizing(border-box);
+}
+
+.header-iphone {
+  display: block;
+  min-width: 258px;
+  min-height: 286px;
+
+  background: url("../img/iphone-hand-mobile.png") no-repeat left center;
+}
+@media #{$tablet} {
+  .main-header {
+    padding-bottom: 100px;
+  }
+  .main-header__logo {
+    width: 147px;
+    height: 40px;
+
+    background: url("../img/logo-pink-white-tablet.svg") no-repeat center center;
+  }
+  .main-header__title {
+    display: inline-block;
+  }
+  .header-iphone {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 470px;
+    height: 545px;
+
+    background: url("../img/iphone-hand-tablet.png") no-repeat right center;
+  }
+}
+@media #{$desktop} {
+  .main-header__logo {
+    flex-grow: 1;
+
+    background: url("../img/logo-pink-white-desktop.svg") no-repeat center center;
+  }
+  .main-header__title {
+    display: block;
+
+    font-size: $desk-title;
+  }
 }
