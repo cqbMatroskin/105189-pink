@@ -12,6 +12,11 @@
 
   background-color: transparent;
   border: 3px solid $white;
+  border-radius: 30px;
+}
 
-  @include border-radius(30px);
+@media #{$desktop} {
+  .btn-transparent {
+    font-size: 21px;
+  }
 }

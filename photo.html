@@ -4,17 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Photo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="main-header">
     <div class="main-header__wrap">
-      <div class="main-header__logo">
-        <img src="http://goo.gl/T5bSWm" width="150" height="100" alt="Logo">
-      </div>
+      <a class="main-header__logo" href="index.html"></a>
+      <div class="main-nav__toggle main-nav__toggle--closed"></div>
       <nav class="main-nav">
-        <div class="main-nav__toggle main-nav__toggle--closed"></div>
         <div class="main-nav__wrapper main-nav__wrapper--closed">
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -32,113 +31,150 @@
           </ul>
         </div>
       </nav>
-      <h1 class="main-header__title">Фотографии пользователей</h1>
+      <div class="main-header__wrap">
+        <h1 class="main-header__title main-header__inner-title">Фотографии пользователей</h1>
+      </div>
     </div>
   </header>
   <div class="inner-subtitle">
     Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
   </div>
-  <article class="post post--best">
-    <img class="post__photo" src="http://goo.gl/T5bSWm" width="150" height="100" alt="photo">
-    <div class="post-wrap">
+  <div class="post__flex-wrap">
+    <article class="post post--best">
+      <img class="post__photo" src="img/panorama-mobile.jpg" alt="photo">
       <div class="panorama-title">Панорама дня</div>
+      <div class="post__text-comment-wrap">
         <blockquote class="post__comment">
-          <div class="post__author">Анна <span class="comment__date">5 минут назад</span></div>
+          <div class="post__author">Анна <span class="comment__date">(5 минут назад)</span></div>
           <p class="post__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
         </blockquote>
-        <a class="post__like" href="#">Нравится: 215</a>
-    </div>
-  </article>
-
-  <div class="post-wrap">
-    <article class="post">
-      <img class="post__photo" src="http://goo.gl/T5bSWm" width="150" height="100" alt="photo">
-      <blockquote class="post__comment">
-        <div class="post__author">Левон <span class="comment__date">5 часов назад</span></div>
-        <p class="post__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-      </blockquote>
-      <a class="post__like" href="#">Нравится: 356</a>
-    </article>
-
-    <article class="post">
-      <img class="post__photo" src="http://goo.gl/T5bSWm" width="150" height="100" alt="photo">
-      <blockquote class="post__comment">
-        <div class="post__author">Антон <span class="comment__date">12 часов назад</span></div>
-        <p class="post__text">Соседи будут рады.</p>
-      </blockquote>
-      <a class="post__like" href="#">Нравится: 666</a>
-    </article>
-
-    <article class="post">
-      <img class="post__photo" src="http://goo.gl/T5bSWm" width="150" height="100" alt="photo">
-      <blockquote class="post__comment">
-        <div class="post__author">Борис <span class="comment__date">20 часов назад</span></div>
-        <p class="post__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
-      </blockquote>
-      <a class="post__like" href="#">Нравится: 215</a>
-    </article>
-
-    <article class="post">
-      <img class="post__photo" src="http://goo.gl/T5bSWm" width="150" height="100" alt="photo">
-      <blockquote class="post__comment">
-        <div class="post__author">Борис <span class="comment__date">25 часов назад</span></div>
-        <p class="post__text">Самая кубанская в мире!</p>
-      </blockquote>
-      <a class="post__like" href="#">Нравится: 4</a>
-    </article>
-
-    <article class="post">
-      <div class="post__wrap">
-        <img class="post__photo" src="http://goo.gl/T5bSWm" width="150" height="100" alt="photo">
-        <blockquote class="post__comment">
-          <div class="post__author">Максим <span class="comment__date">40 часов назад</span></div>
-          <p class="post__text">Где снег-то?</p>
-        </blockquote>
-        <a class="post__like" href="#">Нравится: 150</a>
+        <div class="post__like">
+          <a class="icon-heart" href="#"></a><a class="post__like-btn" href="#">Нравится: 215</a>
+        </div>
       </div>
     </article>
+  </div>
+  <div class="post-wrap">
+    <div class="post__flex-wrap">
+      <article class="post">
+        <img class="post__photo" src="img/photo-1-mobile.jpg" alt="photo">
+        <div class="post__text-comment-wrap">
+          <blockquote class="post__comment">
+            <div class="post__author">Левон <span class="comment__date">(5 часов назад)</span></div>
+            <p class="post__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+          </blockquote>
+          <div class="post__like">
+            <a class="icon-heart" href="#"></a><a class="post__like-btn" href="#"> Нравится: 356</a>
+          </div>
+        </div>
+      </article>
 
-    <article class="post">
-      <img class="post__photo" src="http://goo.gl/T5bSWm" width="150" height="100" alt="photo">
-      <blockquote class="post__comment">
-        <div class="post__author">Надежда <span class="comment__date">45 часов назад</span></div>
-        <p class="post__text">Всем GM и взаимные лайки!</p>
-      </blockquote>
-      <a class="post__like" href="#">Нравится: 2560</a>
-    </article>
+      <article class="post">
+        <img class="post__photo" src="img/photo-2-mobile.jpg" alt="photo">
+        <div class="post__text-comment-wrap">
+          <blockquote class="post__comment">
+            <div class="post__author">Антон <span class="comment__date">(12 часов назад)</span></div>
+            <p class="post__text">Соседи будут рады.</p>
+          </blockquote>
+          <div class="post__like">
+            <a class="icon-heart" href="#"></a><a class="post__like-btn" href="#">Нравится: 666</a>
+          </div>
+        </div>
+      </article>
 
-    <p>Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+      <article class="post">
+        <img class="post__photo" src="img/photo-3-mobile.jpg" alt="photo">
+        <div class="post__text-comment-wrap">
+          <blockquote class="post__comment">
+            <div class="post__author">Борис <span class="comment__date">(20 часов назад)</span></div>
+            <p class="post__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+          </blockquote>
+          <div class="post__like">
+            <a class="icon-heart" href="#"></a><a class="post__like-btn" href="#">Нравится: 215</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="post">
+        <img class="post__photo" src="img/photo-4-mobile.jpg" alt="photo">
+        <div class="post__text-comment-wrap">
+          <blockquote class="post__comment">
+            <div class="post__author">Борис <span class="comment__date">(25 часов назад)</span></div>
+            <p class="post__text">Самая кубанская в мире!</p>
+          </blockquote>
+          <div class="post__like">
+            <a class="icon-heart" href="#"></a><a class="post__like-btn" href="#">Нравится: 4</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post__wrap">
+          <img class="post__photo" src="img/photo-5-mobile.jpg" alt="photo">
+          <div class="post__text-comment-wrap">
+            <blockquote class="post__comment">
+              <div class="post__author">Максим <span class="comment__date">(40 часов назад)</span></div>
+              <p class="post__text">Где снег-то?</p>
+            </blockquote>
+            <div class="post__like">
+              <a class="icon-heart" href="#"></a><a class="post__like-btn" href="#">Нравится: 150</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="post">
+        <img class="post__photo" src="img/photo-6-mobile.jpg" alt="photo">
+        <div class="post__text-comment-wrap">
+          <blockquote class="post__comment">
+            <div class="post__author">Надежда <span class="comment__date">(45 часов назад)</span></div>
+            <p class="post__text">Всем GM и взаимные лайки!</p>
+          </blockquote>
+          <div class="post__like">
+            <a class="icon-heart" href="#"></a><a class="post__like-btn" href="#">Нравится: 2560</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    <p class="post__slogan"><span>Затмите их всех!</span> Выкладывайте все, что накопилось в телефоне!</p>
   </div>
   <article class="tool">
-    <div class="tool__wrap">
-      <img class="tool__photo" src="http://goo.gl/T5bSWm" width="150" height="100" alt="photo">
+    <div class="tool__wrap-photo">
+      <img class="tool__photo" src="img/photo-7-mobile.jpg" alt="photo">
+    </div>
+    <div class="tool__wrap-instrument">
       <div class="tool__instrument">
         <a class="tool__crop" href="#"></a>
         <a class="tool__color" href="#"></a>
         <a class="tool__brightness" href="#"></a>
-        <div class="range-controls">
-          <div class="range-controls__scale">
-            <div class="range-controls__toggle"></div>
-          </div>
+      </div>
+      <div class="range-controls">
+        <div class="range-controls__scale">
+          <div class="range-controls__toggle"></div>
         </div>
       </div>
+
       <div class="tool-button">
-        <a class="btn-transparent btn-transparent--post" href="#"> Запостить</a>
-        <a class="btn-transparent btn-transparent--cancel" href="#">Отмена</a>
+        <div class="tool__wrap">
+          <a class="btn-transparent btn-transparent--post" href="#"> Запостить</a>
+          <a class="btn-transparent btn-transparent--cancel" href="#">Отмена</a>
+        </div>
       </div>
     </div>
   </article>
 
   <footer class="main-footer">
-    <div class="post__wrap">
-      <img class="footer__logo" src="http://goo.gl/T5bSWm" alt="Logo">
+    <div class="main-footer__wrap">
+      <img class="footer__logo" src="img/logo-pink-blue-mobile.svg" alt="Logo">
       <div class="social-item">
-        <a class="social-item__links social-item__links--twitter" href="#">Twitter</a>
-        <a class="social-item__links social-item__links--facebook" href="#">Facebook</a>
-        <a class="social-item__links social-item__links--youtube" href="#">Youtube</a>
+        <a class="social-item__links social-item__links--twitter" href="#"></a>
+        <a class="social-item__links social-item__links--facebook" href="#"></a>
+        <a class="social-item__links social-item__links--youtube" href="#"></a>
       </div>
-      <a target="_blank" href="https://htmlacademy.ru"><img src="http://goo.gl/T5bSWm" alt="Logo"></a>
-      <!--Logo через :after-->
+      <div class="main-footer__build">
+        Разработано
+        <a target="_blank" href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" alt="Logo"></a>
+      </div>
     </div>
   </footer>
 </body>

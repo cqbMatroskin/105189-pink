@@ -1,4 +1,6 @@
 .main-header {
+  position: relative;
+
   background: $dark-blue url("../img/bg-back-mobile.jpg") no-repeat center center;
   background-size: cover;
 
@@ -8,7 +10,12 @@
     @include wrap;
   }
 }
+
 .main-header__logo {
+  position: relative;
+  z-index: 12;
+
+  display: block;
   width: 75px;
   height: 22px;
 
@@ -16,30 +23,26 @@
 }
 
 .main-header__title {
-  display: none;
-  width: 300px;
-  padding: 0 30px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
 
   font-weight: 300;
-  font-size: $tablet-title;
-  line-height: 46px;
+  font-size: $mobile-title;
+  line-height: 34px;
   text-align: center;
   color: $white;
-
-  @include box-sizing(border-box);
 }
 
-.header-iphone {
-  display: block;
-  min-width: 258px;
-  min-height: 286px;
 
-  background: url("../img/iphone-hand-mobile.png") no-repeat left center;
-}
 @media #{$tablet} {
   .main-header {
     padding-bottom: 100px;
   }
+
+  .main-header__top-line {
+    margin-bottom: 170px;
+  }
+
   .main-header__logo {
     width: 147px;
     height: 40px;
@@ -48,16 +51,18 @@
   }
   .main-header__title {
     display: inline-block;
+    width: 300px;
+    padding: 0 30px;
   }
-  .header-iphone {
-    position: absolute;
-    right: 0;
-    bottom: 0;
 
-    width: 470px;
-    height: 545px;
+  .main-header__inner-title {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
 
-    background: url("../img/iphone-hand-tablet.png") no-repeat right center;
+    font-size: $desk-title;
+    line-height: 60px;
   }
 }
 @media #{$desktop} {
@@ -70,5 +75,6 @@
     display: block;
 
     font-size: $desk-title;
+    line-height: 60px;
   }
 }

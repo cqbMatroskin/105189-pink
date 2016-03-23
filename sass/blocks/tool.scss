@@ -1,3 +1,64 @@
 .tool {
-  @include outline;
+  margin-bottom: 40px;
+  padding-top: 15px;
+  padding-bottom: 40px;
+
+  background: $bg-gray;
+  .tool__wrap,
+  .tool__wrap-photo {
+    @include wrap;
+  }
+}
+.tool__photo {
+  display: block;
+  margin: 0 auto;
+}
+.tool__instrument {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-top: 45px;
+}
+.tool__crop {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+
+  background: url("../img/icon-editor-crop.svg") no-repeat center center;
+}
+
+.tool__color {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+
+  background: url("../img/icon-editor-fill.svg") no-repeat center center;
+}
+
+.tool__brightness {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+
+  background: url("../img/icon-editor-contrast.svg") no-repeat center center;
+}
+
+@media #{$tablet} {
+  .tool {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .tool__wrap-photo,
+  .tool__wrap-instrument,
+  .tool-button {
+    flex: 1 50%;
+  }
+  .tool__instrument {
+    padding-top: 0;
+  }
 }

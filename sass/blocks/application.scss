@@ -1,4 +1,7 @@
 .application {
+  position: relative;
+  z-index: 3;
+
   display: flex;
   flex-flow: column wrap;
 
@@ -7,7 +10,12 @@
   line-height: 28px;
   text-align: center;
   color: $white;
+
+  &__wrap {
+    @include wrap;
+  }
 }
+
 .application__icons {
   display: flex;
   flex-flow: row wrap;
@@ -30,5 +38,15 @@
   .application {
     align-items: flex-start;
     width: 48.3%;
+  }
+}
+
+@media #{$desktop} {
+  .application__wrap {
+    box-sizing: border-box;
+    padding: 0 50px;
+  }
+  .application__icons {
+    margin-top: 70px;
   }
 }

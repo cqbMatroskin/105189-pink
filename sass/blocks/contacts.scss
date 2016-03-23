@@ -1,3 +1,68 @@
 .contacts {
-  @include outline;
+  text-align: center;
+  &__wrap {
+    @include wrap;
+  }
+}
+.contacts__title {
+  font-weight: 300;
+  font-size: $mobile-title;
+  line-height: 34px;
+}
+.contacts__items {
+  font-weight: 300;
+  font-size: 24px;
+  color: $pink;
+
+  h3 {
+    margin-bottom: 0;
+
+    font-weight: 700;
+    font-size: 18px;
+    color: $base-color;
+  }
+  a {
+    font-weight: 300;
+    font-size: 24px;
+    color: $pink;
+    text-decoration: none;
+  }
+}
+
+@media #{$tablet} {
+  .contacts__title {
+    font-size: $tablet-title;
+    line-height: 50px;
+  }
+
+  .contacts__items-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .contacts__items {
+    flex-grow: 1;
+  }
+  .contacts__items:nth-child(3) {
+    flex-grow: 0;
+  }
+}
+
+@media #{$desktop} {
+  .contacts__title {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .contacts__items:nth-child(1) {
+    order: 1;
+  }
+  .contacts__items:nth-child(2) {
+    order: 3;
+  }
+  .contacts__items:nth-child(3) {
+    order: 2;
+  }
 }

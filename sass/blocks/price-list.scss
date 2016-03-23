@@ -1,3 +1,25 @@
 .price-list {
-  @include outline;
+  display: none;
+  &__wrap {
+    @include wrap;
+  }
+}
+
+.price__table {
+  display: block;
+
+  border-collapse: collapse;
+  empty-cells: hide;
+  font-size: 18px;
+  line-height: 30px;
+
+  td {
+    padding: 10px;
+
+    border: 2px solid #cccccc;
+  }
+}
+
+.hide {
+  display: none;
 }

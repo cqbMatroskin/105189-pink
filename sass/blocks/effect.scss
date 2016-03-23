@@ -5,7 +5,55 @@
 }
 
 .effect {
-  &__wrap {
-    @include wrap;
+  margin-bottom: 45px;
+}
+
+.effect__wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  @include wrap;
+}
+
+.effect__timer {
+  display: block;
+  width: 298px;
+  height: 345px;
+
+  background: url("../img/effect__time.png") no-repeat center center;
+  background-size: contain;
+}
+
+.effect__item {
+  flex-basis: 320px;
+}
+
+.effect__title {
+  font-size: 30px;
+  line-height: 40px;
+
+  span {
+    display: block;
+  }
+}
+
+.effect__link {
+  color: $pink;
+}
+
+@media #{$desktop} {
+  .effect__item {
+    flex-basis: 570px;
+  }
+
+  .effect__title span {
+    display: inline;
+  }
+
+  .effect__text {
+    font-size: 18px;
+    line-height: 28px;
   }
 }

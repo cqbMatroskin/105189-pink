@@ -1,16 +1,51 @@
 .reviews {
+  margin-bottom: 40px;
   &__wrap {
     @include wrap;
   }
 }
 
 .reviews__slide {
-  display: flex;
-  flex-flow: column wrap;
+  display: none;
 
+  line-height: 30px;
   text-align: center;
 }
 
+.reviews__subtitle {
+  display: none;
+}
+
+.reviews__name {
+  margin-bottom: 10px;
+
+  font-size: 18px;
+  color: $black;
+}
+
 .reviews__text {
-  margin-top: 0;
+  margin: 0;
+}
+
+
+@media #{$tablet}, #{$desktop} {
+  .reviews__slide {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .reviews__name {
+    margin-top: 20px;
+    margin-bottom: 0;
+
+    font-size: 20px;
+  }
+
+  .reviews__subtitle {
+    display: block;
+  }
+
+  .reviews__text {
+    font-weight: 400;
+    font-size: 18px;
+  }
 }

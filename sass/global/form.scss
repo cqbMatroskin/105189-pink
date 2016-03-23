@@ -1,0 +1,273 @@
+.page-content {
+  margin-bottom: 40px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+
+  color: $base-color;
+}
+fieldset {
+  margin: 0;
+  padding: 25px 0;
+
+  border: 0;
+  outline: none;
+}
+fieldset:nth-child(2n) {
+  background: $bg-gray;
+}
+.form__wrap {
+  display: flex;
+  flex-direction: column;
+
+  @include wrap;
+}
+.form__row {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.form-label-text {
+  margin-bottom: 10px;
+
+  font-weight: 400;
+  color: $pink;
+  text-transform: uppercase;
+  text-indent: 15px;
+}
+.fieldset-title {
+  margin-bottom: 20px;
+
+  font-weight: 400;
+  text-align: center;
+  color: $pink;
+  text-transform: uppercase;
+}
+.form-input-text {
+  margin-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+
+  font-size: 18px;
+  line-height: 30px;
+
+  border: 2px solid #e5e5e5;
+  outline: none;
+}
+::-webkit-input-placeholder {
+  color: $base-color;
+}
+::-moz-placeholder {
+  color: $base-color;
+}
+/* Firefox 19+ */
+:-moz-placeholder {
+  color: $base-color;
+}
+/* Firefox 18- */
+:-ms-input-placeholder {
+  color: $base-color;
+}
+.form__achievements {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .form__row {
+    flex-direction: row;
+    align-items: baseline;
+    margin-bottom: 15px;
+  }
+}
+.form-label-checkbox {
+  font-weight: 400;
+  font-size: 18px;
+}
+.form__application {
+  .form__row {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-bottom: 40px;
+  }
+  .form__row:last-child {
+    margin: 0;
+  }
+  .form-radio-label {
+    font-size: 18px;
+  }
+}
+.form__contact {
+  .fieldset-title {
+    display: none;
+  }
+  .form__row-tablet {
+    display: none;
+  }
+}
+.form__emotions {
+  textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+
+    border: 2px solid #e5e5e5;
+  }
+}
+.btn {
+  padding: 20px 30px;
+
+  font-weight: 700;
+  font-size: 18px;
+  color: $white;
+  text-transform: uppercase;
+
+  background: $green;
+  border: 0;
+  border-radius: 2px;
+  outline: none;
+}
+.form__submit-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.interview__note {
+  text-transform: uppercase;
+}
+.btn--submit {
+  padding: 20px 0;
+}
+
+@media #{$tablet} {
+  fieldset:nth-child(2n) {
+    background: $white;
+  }
+  fieldset:not(.form__full-name) {
+    .form__wrap {
+      position: relative;
+
+      box-sizing: border-box;
+      padding: 40px 60px;
+
+      border: 2px solid #e5e5e5;
+    }
+  }
+  .form__full-name {
+    order: -1;
+    .form__row {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .form-input-text {
+      flex-grow: 10;
+    }
+    .form-label-text {
+      flex-grow: 1;
+    }
+  }
+  .fieldset-title {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 15px;
+
+    white-space: nowrap;
+
+    background: $white;
+    transform: translateX(-50%);
+  }
+  .form__application {
+    order: 2;
+  }
+  .form__contact {
+    order: 3;
+    .fieldset-title {
+      display: inline-block;
+    }
+    .form__row-tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      margin-bottom: 15px;
+    }
+    .form__row {
+      display: none;
+    }
+  }
+  .form__achievements {
+    order: 4;
+    .form__row:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+  .form__emotions {
+    order: 5;
+  }
+  .form__submit-wrap {
+    order: 6;
+    .form__wrap {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+    }
+  }
+  .btn--submit,
+  .interview__note {
+    flex-grow: 1;
+  }
+  .interview__note {
+    text-align: right;
+  }
+}
+@media #{$desktop} {
+  .form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .form__full-name,
+  .form__application {
+    flex: 1 50%;
+  }
+  .form__contact {
+    flex: 1 100%;
+    .form__wrap {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+  .form__achievements {
+    flex: 1 100%;
+    .form__wrap {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .form__row {
+      flex: 1 33.33333%;
+    }
+  }
+  .form__emotions {
+    flex: 1 100%;
+    margin-bottom: 40px;
+  }
+  .form__submit-wrap {
+    flex: 1 100%;
+    // .form__wrap {
+    //   display: flex;
+    //   flex-direction: row;
+    //   align-items: baseline;
+    // }
+  }
+  // .btn--submit,
+  // .interview__note {
+  //   flex-grow: 1;
+  // }
+  // .interview__note {
+  //   text-align: right;
+  // }
+}

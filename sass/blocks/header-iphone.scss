@@ -1,3 +1,22 @@
-.header-phone {
-  @include outline;
+.header-iphone {
+  display: block;
+  min-width: 258px;
+  min-height: 286px;
+
+  background: url("../img/iphone-hand-mobile.png") no-repeat left center;
+}
+
+@media #{$tablet} {
+  .header-iphone {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 88.5%;
+    height: 545px;
+    margin: 0 auto;
+
+    background: url("../img/iphone-hand-tablet.png") no-repeat right center;
+  }
 }

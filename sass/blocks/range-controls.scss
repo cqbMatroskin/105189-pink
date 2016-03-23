@@ -1,3 +1,26 @@
 .range-controls {
-  @include outline;
+  margin-bottom: 40px;
+}
+.range-controls__scale {
+  position: relative;
+
+  width: 240px;
+  height: 2px;
+  margin: 0 auto;
+
+  background: $base-color;
+}
+.range-controls__toggle {
+  position: absolute;
+  top: 50%;
+  left: 83%;
+
+  width: 15px;
+  height: 14px;
+
+  background: $bg-gray;
+  border: 2px solid $pink;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }

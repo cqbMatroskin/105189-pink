@@ -1,0 +1,18 @@
+body {
+  font: 14px/24px $font;
+  font-weight: normal;
+  color: $base-color;
+}
+
+@media #{$mobile} {
+}
+
+@media #{$tablet} {
+}
+
+@media #{$desktop} {
+  body {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}

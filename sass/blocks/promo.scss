@@ -1,4 +1,5 @@
 .promo {
+  margin-bottom: 60px;
   overflow: hidden;
   &__wrap {
     position: relative;
@@ -12,6 +13,7 @@
 }
 
 .promo__title {
+  margin-top: 40px;
   margin-bottom: 100px;
 
   font-weight: 300;
@@ -22,6 +24,7 @@
 
 .promo__item-title {
   font-size: 18px;
+  color: $black;
 }
 
 .promo__iphone {
@@ -30,6 +33,7 @@
 
   width: 157px;
   height: 320px;
+  margin: 0 auto;
 
   background: url("../img/iphone-screen-mobile.png") no-repeat center center;
 }
@@ -49,7 +53,7 @@
   .promo__iphone {
     left: 50%;
 
-    @include transform(translateX(-50%));
+    transform: translateX(-50%);
   }
 }
 
@@ -58,10 +62,28 @@
     flex-flow: column wrap;
   }
 
+  .promo__title {
+    font-size: $tablet-title;
+    line-height: 50px;
+  }
+
   .promo__items {
     display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .promo__list {
+    display: flex;
+    flex-grow: 2;
+    flex-basis: 320px;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+  }
+  .promo__iphone-wrap {
+    flex-grow: 3;
+    height: 485px;
+    overflow: hidden;
   }
 
   .promo__iphone {
@@ -71,6 +93,79 @@
     width: 268px;
     height: 548px;
 
-    background: url("../img/iphone-screen-mobile.png") no-repeat center center;
+    background: url("../img/iphone-screen-tablet.png") no-repeat center center;
+  }
+
+  .promo__iphone-1,
+  .promo__iphone-2 {
+    display: none;
+    width: 186px;
+    height: 382px;
+  }
+
+  .promo__iphone-2 {
+    background: url("../img/iphone-screen-desktop_2.png") no-repeat center center;
+  }
+
+  .promo__iphone-1 {
+    background: url("../img/iphone-screen-desktop_1.png") no-repeat center center;
+  }
+}
+
+@media #{$desktop} {
+  .promo__title {
+    font-size: $desk-title;
+    line-height: 60px;
+  }
+
+  .promo__items {
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+  }
+
+  .promo__iphone-wrap {
+    display: flex;
+    flex-grow: 0;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  .promo__iphone-1,
+  .promo__iphone-2 {
+    display: block;
+  }
+  .promo__iphone {
+    width: 186px;
+    height: 382px;
+    margin: 0;
+
+    background-size: contain;
+  }
+
+  .promo__list {
+    flex-grow: 0;
+    flex-basis: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .promo__item {
+    flex-basis: 255px;
+
+    text-align: center;
+  }
+
+  .promo__item-title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .promo__slogan-text {
+    font-size: 18px;
+    line-height: 28px;
   }
 }

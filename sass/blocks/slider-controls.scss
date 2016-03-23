@@ -1,3 +1,41 @@
 .slider-controls {
-  @include outline;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.slider-controls__item {
+  display: none;
+}
+
+.slider-controls__button {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 10px;
+
+  vertical-align: middle;
+
+  background: rgba(0,0,0,0.3);
+  border-radius: 50%;
+}
+
+#btn_1:checked ~ label[for="btn_1"],
+#btn_2:checked ~ label[for="btn_2"],
+#btn_3:checked ~ label[for="btn_3"] {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+
+  vertical-align: middle;
+
+  background-color: transparent;
+  border: 3px solid $base-color;
+  border-radius: 50%;;
+}
+
+#btn_1:checked ~ .reviews__items #slide_1,
+#btn_2:checked ~ .reviews__items #slide_2,
+#btn_3:checked ~ .reviews__items #slide_3 {
+  display: block;
 }

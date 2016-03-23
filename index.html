@@ -3,21 +3,20 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    .map {
-      min-height: 300px;
-    }
-  </style>
 </head>
 
 <body>
   <header class="main-header">
-    <nav class="main-nav">
+    <div class="main-header__wrap">
+      <a class="main-header__logo" href="index.html"></a>
+      <div class="main-nav__toggle main-nav__toggle--closed"></div>
+    </div>
+    <nav class="main-nav main-nav--closed">
       <div class="main-nav__wrapper ">
-        <a class="main-header__logo" href="index.html"></a>
-        <ul class="main-nav__list">
+        <ul class="main-nav__list main-nav__list--opened">
           <li class="main-nav__item">
             <a class="main-nav__link" href="#">главная</a>
           </li>
@@ -31,16 +30,14 @@
             <a class="main-nav__link" href="#">html academy</a>
           </li>
         </ul>
-        <div class="main-nav__toggle main-nav__toggle--closed"></div>
       </div>
     </nav>
     <div class="main-header__wrap">
       <h1 class="main-header__title">Взгляните на жизнь иначе!</h1>
-      <div class="header-iphone">
-      </div>
     </div>
+    <div class="header-iphone"></div>
     <section class="application">
-      <div class="main-header__wrap">
+      <div class="application__wrap">
         <a class="btn-transparent application__btn" href="#">Скачать приложение</a>
         <div class="application__icons">
           <a class="application__link" href="#">
@@ -64,97 +61,114 @@
         Нам есть, что вам предложить!
       </h1>
       <div class="promo__items">
-        <article class="promo__item">
-          <h3 class="promo__item-title">Поднимает настроение</h3>
-          <p class="promo__slogan-text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
-        </article>
-        <article class="promo__item">
-          <h3 class="promo__item-title">Меняет мир вокруг</h3>
-          <p class="promo__slogan-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-        </article>
-        <article class="promo__item">
-          <h3 class="promo__item-title">Заводит новых друзей</h3>
-          <p class="promo__slogan-text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-        </article>
-        <div class="promo__iphone"></div>
+        <div class="promo__list">
+          <article class="promo__item">
+            <h3 class="promo__item-title">Поднимает настроение</h3>
+            <p class="promo__slogan-text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+          </article>
+          <article class="promo__item">
+            <h3 class="promo__item-title">Меняет мир вокруг</h3>
+            <p class="promo__slogan-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          </article>
+          <article class="promo__item">
+            <h3 class="promo__item-title">Заводит новых друзей</h3>
+            <p class="promo__slogan-text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+          </article>
+        </div>
+        <div class="promo__iphone-wrap">
+          <div class="promo__iphone"></div>
+          <div class="promo__iphone-2"></div>
+          <div class="promo__iphone-1"></div>
+        </div>
       </div>
     </div>
   </section>
   <section class="effect">
     <div class="effect__wrap">
       <div class="effect__timer"></div>
-      <h4 class="effect__title">
-        Эффект на 24 часа!
+      <div class="effect__item">
+        <h4 class="effect__title">
+        <span>Эффект</span> на 24 часа!
       </h4>
-      <p class="effect__text">
-        Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
-         <a href="">Узнать больше об исследовании</a>
-      </p>
+        <p class="effect__text">
+          Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+        <a class="effect__link" href="#">Узнать больше об исследовании</a>
+      </div>
     </div>
   </section>
   <section class="reviews">
     <div class="reviews__wrap">
       <div class="reviews__items">
-        <article class="reviews__slide">
+        <article class="reviews__slide" id="slide_1">
+          <div class="reviews__subtitle">25 лет, водитель трамвая</div>
           <h3 class="reviews__name">Николай Петров</h3>
           <p class="reviews__text">
             «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </p>
         </article>
-        <article class="reviews__slide">
+        <article class="reviews__slide" id="slide_2">
+          <div class="reviews__subtitle">25 лет, водитель трамвая</div>
           <h3 class="reviews__name">Николай Петров</h3>
           <p class="reviews__text">
             «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </p>
         </article>
-        <article class="reviews__slide">
+        <article class="reviews__slide" id="slide_3">
+          <div class="reviews__subtitle">25 лет, водитель трамвая</div>
           <h3 class="reviews__name">Николай Петров</h3>
           <p class="reviews__text">
             «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </p>
         </article>
-        <div class="slider-controls">
-          <input class="slider-controls__item" id="btn1" name="toggle" type="radio" checked>
-          <input class="slider-controls__item" id="btn2" name="toggle" type="radio">
-          <input class="slider-controls__item" id="btn3" name="toggle" type="radio">
-          <label class="slider-controls__button" for="btn1"></label>
-          <label class="slider-controls__button" for="btn2"></label>
-          <label class="slider-controls__button" for="btn3"></label>
-        </div>
+      </div>
+      <div class="slider-controls">
+        <input class="slider-controls__item" id="btn_1" name="toggle" type="radio" checked>
+        <input class="slider-controls__item" id="btn_2" name="toggle" type="radio">
+        <input class="slider-controls__item" id="btn_3" name="toggle" type="radio">
+        <label class="slider-controls__button" for="btn_1"></label>
+        <label class="slider-controls__button" for="btn_2"></label>
+        <label class="slider-controls__button" for="btn_3"></label>
       </div>
     </div>
   </section>
   <section class="price-list">
     <div class="price-list__wrap">
-      <table class="price-list__table">
-        <tr class="price-list__tr">
-          <th colspan="2">
-            <div class="price-list__hit">стандарт</div>
-          </th>
+      <table class="price__table">
+        <tr>
+          <td class="hide"></td>
+          <td class="col-2">База</td>
+          <td class="col-3">Стандарт</td>
+          <td class="col-4">Анлим</td>
         </tr>
-        <tr class="price-list__tr">
-          <td colspan="2">3,99 USD</td>
+        <tr>
+          <td class="hide"></td>
+          <td class="col-2">1,99 USD</td>
+          <td class="col-3">3,99 USD</td>
+          <td class="col-4">9,99 USD</td>
         </tr>
-        <tr class="price-list__tr">
-          <td>розовый фильтр</td>
-          <td></td>
-          <!--фон через background-->
+        <tr>
+          <td class="col-1">Розовый фильтр</td>
+          <td class="col-2 col-check"></td>
+          <td class="col-3 col-check"></td>
+          <td class="col-4 col-check"></td>
         </tr>
-        <tr class="price-list__tr">
-          <td>смайлики</td>
-          <td></td>
-          <!--фон через background-->
+        <tr>
+          <td class="col-1">Смайлики</td>
+          <td class="col-2 col-cancell"></td>
+          <td class="col-3 col-check"></td>
+          <td class="col-4 col-check"></td>
         </tr>
-        <tr class="price-list__tr">
-          <td>комментарии</td>
-          <td></td>
-          <!--фон через background-->
+        <tr>
+          <td class="col-1">Комментарии</td>
+          <td class="col-2 col-cancell"></td>
+          <td class="col-3 col-cancell"></td>
+          <td class="col-4 col-check"></td>
         </tr>
       </table>
       <div class="slider-controls">
-        <input class="slider-controls__item" id="btn1" name="toggle" type="radio" checked>
-        <input class="slider-controls__item" id="btn2" name="toggle" type="radio">
-        <input class="slider-controls__item" id="btn3" name="toggle" type="radio">
+        <input class="slider-controls__item" id="btn1" name="toggle2" type="radio" checked>
+        <input class="slider-controls__item" id="btn2" name="toggle2" type="radio">
+        <input class="slider-controls__item" id="btn3" name="toggle2" type="radio">
         <label class="slider-controls__button" for="btn1"></label>
         <label class="slider-controls__button" for="btn2"></label>
         <label class="slider-controls__button" for="btn3"></label>
@@ -167,15 +181,18 @@
       Остались вопросы? <br>
       Свяжитесь с нами!
     </h2>
-      <div class="contacts__items">
-        <h3>Звоните:</h3> +7 (812) 555-66-66
-      </div>
-      <div class="contacts__items">
-        <h3>Пишите:</h3>
-        <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-      </div>
-      <div class="contacts__items">
-        <h3>Приезжайте в гости:</h3> ул. Большая Конюшенная, 19/8
+      <div class="contacts__items-wrap">
+        <div class="contacts__items">
+          <h3>Звоните:</h3> +7 (812) 555-66-66
+        </div>
+        <div class="contacts__items">
+          <h3>Пишите:</h3>
+          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </div>
+        <div class="contacts__items">
+          <h3>Приезжайте в гости:</h3> ул. Большая
+          <br> Конюшенная, 19/8
+        </div>
       </div>
     </div>
   </section>
@@ -203,6 +220,8 @@
       });
     }
     google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+  <script>
   </script>
 </body>
 
