@@ -43,10 +43,10 @@
   }
 
   .contacts__items {
-    flex-grow: 1;
+    flex: 1 50%;
   }
   .contacts__items:nth-child(3) {
-    flex-grow: 0;
+    flex: 1 100%;
   }
 }
 
@@ -55,7 +55,12 @@
     font-size: 50px;
     line-height: 60px;
   }
-
+  .contacts__items-wrap {
+    flex-wrap: nowrap;
+  }
+  .contacts__items {
+    flex: 0 33.33333%;
+  }
   .contacts__items:nth-child(1) {
     order: 1;
   }
