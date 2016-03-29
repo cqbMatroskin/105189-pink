@@ -7,9 +7,9 @@ $black: #000000;
 $green: #2aab6d;
 
 /*------MEDIA------*/
-$mobile: "only screen and (max-width : 767px)";
-$tablet: "only screen and (min-width : 768px)";
-$desktop: "only screen and (min-width : 1200px)";
+$mobile: "(max-width : 699px)";
+$tablet: "(min-width : 700px)";
+$desktop: "(min-width : 1200px)";
 
 
 /*----TEXT-----*/

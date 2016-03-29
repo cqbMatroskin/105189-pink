@@ -9,44 +9,52 @@
 </head>
 
 <body>
-  <header class="main-header">
-    <div class="main-header__wrap">
-      <a class="main-header__logo" href="index.html"></a>
-      <div class="main-nav__toggle main-nav__toggle--closed"></div>
-    </div>
-    <nav class="main-nav main-nav--closed">
-      <div class="main-nav__wrapper ">
-        <ul class="main-nav__list main-nav__list--opened">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#">главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#">фотографии</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#">конкурс</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#">html academy</a>
-          </li>
-        </ul>
+  <header class="main-header main-header--index">
+    <div class="main-header__top-line main-header__top-line--index">
+      <div class="main-header__wrap">
+        <a class="main-header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-pink-blue-mobile.svg">
+            <source media="(min-width: 700px)" srcset="img/logo-pink-blue-mobile.svg">
+            <img src="img/logo-pink-white-mobile.svg" alt="PINK">
+          </picture>
+        </a>
+        <div class="main-nav__toggle main-nav__toggle--closed"></div>
       </div>
-    </nav>
+      <nav class="main-nav main-nav--closed">
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="photo.html">фотографии</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">конкурс</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" target="_blank" href="https://htmlacademy.ru">HTML academy</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
     <div class="main-header__wrap">
-      <h1 class="main-header__title">Взгляните на жизнь иначе!</h1>
+      <h1 class="main-header__title main-header__title--index">Взгляните на жизнь иначе!</h1>
     </div>
     <div class="header-iphone"></div>
     <section class="application">
       <div class="application__wrap">
-        <a class="btn-transparent application__btn" href="#">Скачать приложение</a>
+        <a class="btn-transparent application__btn" target="_blank" href="https://www.appstore.com">Скачать приложение</a>
         <div class="application__icons">
-          <a class="application__link" href="#">
+          <a class="application__link" target="_blank" href="https://www.appstore.com">
             <img src="img/logo-apple.svg" alt="appstore">
           </a>
-          <a class="application__link" href="#">
+          <a class="application__link" target="_blank" href="https://play.google.com/store?hl=ru">
             <img src="img/logo-android.svg" alt="google play">
           </a>
-          <a class="application__link" href="#">
+          <a class="application__link" target="_blank" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone">
             <img src="img/logo-microsoft.svg" alt="windows phone apps">
           </a>
         </div>
@@ -54,12 +62,12 @@
       </div>
     </section>
   </header>
+  <h1 class="promo__title">
+    Устали от серости мегаполиса?
+    <span>Нам есть, что вам <br> предложить!</span>
+  </h1>
   <section class="promo">
     <div class="promo__wrap">
-      <h1 class="promo__title">
-        Устали от серости мегаполиса? <br>
-        Нам есть, что вам предложить!
-      </h1>
       <div class="promo__items">
         <div class="promo__list">
           <article class="promo__item">
@@ -76,16 +84,21 @@
           </article>
         </div>
         <div class="promo__iphone-wrap">
-          <div class="promo__iphone"></div>
-          <div class="promo__iphone-2"></div>
-          <div class="promo__iphone-1"></div>
+          <div class="promo__iphone"><img src="img/iphone-screen-desktop_3.png" alt="Iphone"></div>
+          <div class="promo__iphone-2"><img src="img/iphone-screen-desktop_2.png" alt="Iphone"></div>
+          <div class="promo__iphone-1"><img src="img/iphone-screen-desktop_1.png" alt="Iphone"></div>
         </div>
       </div>
     </div>
   </section>
   <section class="effect">
     <div class="effect__wrap">
-      <div class="effect__timer"></div>
+      <div class="effect__timer">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/effect__time.png">
+          <img src="img/effect__time-tablet.png" alt="PINK">
+        </picture>
+      </div>
       <div class="effect__item">
         <h4 class="effect__title">
         <span>Эффект</span> на 24 часа!
@@ -99,6 +112,9 @@
   <section class="reviews">
     <div class="reviews__wrap">
       <div class="reviews__items">
+        <input class="slider-controls__item" id="btn_1" name="toggle" type="radio" checked>
+        <input class="slider-controls__item" id="btn_2" name="toggle" type="radio">
+        <input class="slider-controls__item" id="btn_3" name="toggle" type="radio">
         <article class="reviews__slide" id="slide_1">
           <div class="reviews__subtitle">25 лет, водитель трамвая</div>
           <h3 class="reviews__name">Николай Петров</h3>
@@ -108,67 +124,76 @@
         </article>
         <article class="reviews__slide" id="slide_2">
           <div class="reviews__subtitle">25 лет, водитель трамвая</div>
-          <h3 class="reviews__name">Николай Петров</h3>
+          <h3 class="reviews__name">Василий Пупкин</h3>
           <p class="reviews__text">
             «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </p>
         </article>
         <article class="reviews__slide" id="slide_3">
           <div class="reviews__subtitle">25 лет, водитель трамвая</div>
-          <h3 class="reviews__name">Николай Петров</h3>
+          <h3 class="reviews__name">Пётр Николаев</h3>
           <p class="reviews__text">
             «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </p>
         </article>
-      </div>
-      <div class="slider-controls">
-        <input class="slider-controls__item" id="btn_1" name="toggle" type="radio" checked>
-        <input class="slider-controls__item" id="btn_2" name="toggle" type="radio">
-        <input class="slider-controls__item" id="btn_3" name="toggle" type="radio">
-        <label class="slider-controls__button" for="btn_1"></label>
-        <label class="slider-controls__button" for="btn_2"></label>
-        <label class="slider-controls__button" for="btn_3"></label>
+        <div class="slider-controls">
+          <label class="slider-controls__button" for="btn_1"></label>
+          <label class="slider-controls__button" for="btn_2"></label>
+          <label class="slider-controls__button" for="btn_3"></label>
+        </div>
       </div>
     </div>
   </section>
   <section class="price-list">
     <div class="price-list__wrap">
+      <input class="slider-controls__item" id="btn1" name="toggle2" type="radio">
+      <input class="slider-controls__item" id="btn2" name="toggle2" type="radio" checked>
+      <input class="slider-controls__item" id="btn3" name="toggle2" type="radio">
       <table class="price__table">
-        <tr>
-          <td class="hide"></td>
-          <td class="col-2">База</td>
-          <td class="col-3">Стандарт</td>
-          <td class="col-4">Анлим</td>
-        </tr>
-        <tr>
-          <td class="hide"></td>
-          <td class="col-2">1,99 USD</td>
-          <td class="col-3">3,99 USD</td>
-          <td class="col-4">9,99 USD</td>
-        </tr>
-        <tr>
-          <td class="col-1">Розовый фильтр</td>
-          <td class="col-2 col-check"></td>
-          <td class="col-3 col-check"></td>
-          <td class="col-4 col-check"></td>
-        </tr>
-        <tr>
-          <td class="col-1">Смайлики</td>
-          <td class="col-2 col-cancell"></td>
-          <td class="col-3 col-check"></td>
-          <td class="col-4 col-check"></td>
-        </tr>
-        <tr>
-          <td class="col-1">Комментарии</td>
-          <td class="col-2 col-cancell"></td>
-          <td class="col-3 col-cancell"></td>
-          <td class="col-4 col-check"></td>
-        </tr>
+        <thead>
+          <th class="hide"></th>
+          <th class="col-2 hide">
+            <div class="price__head">
+              <span>База</span>
+              <span>1,99 USD</span>
+            </div>
+          </th>
+          <th class="col-2">
+            <div class="price__head price__hit">
+              <div class="price__hit-label"></div>
+              <span>Стандарт</span>
+              <span>3,99 USD</span>
+            </div>
+          </th>
+          <th class="col-2 hide">
+            <div class="price__head">
+              <span>Анлим</span>
+              <span>9,99 USD</span>
+            </div>
+          </th>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-1">Розовый фильтр</td>
+            <td class="col-2 col-img hide"><img src="img/icon-yes.svg" alt="cancel"></td>
+            <td class="col-3 col-img hide"><img src="img/icon-yes.svg" alt="cancel"></td>
+            <td class="col-4 col-img hide"><img src="img/icon-yes.svg" alt="cancel"></td>
+          </tr>
+          <tr>
+            <td class="col-1">Смайлики</td>
+            <td class="col-2 col-img hide"><img src="img/icon-no.svg" alt="cancel"></td>
+            <td class="col-3 col-img hide"><img src="img/icon-yes.svg" alt="cancel"></td>
+            <td class="col-4 col-img hide"><img src="img/icon-yes.svg" alt="cancel"></td>
+          </tr>
+          <tr>
+            <td class="col-1">Комментарии</td>
+            <td class="col-2 col-img hide"><img src="img/icon-no.svg" alt="cancel"></td>
+            <td class="col-3 col-img hide"><img src="img/icon-no.svg" alt="cancel"></td>
+            <td class="col-4 col-img hide"><img src="img/icon-yes.svg" alt="cancel"></td>
+          </tr>
+        </tbody>
       </table>
       <div class="slider-controls">
-        <input class="slider-controls__item" id="btn1" name="toggle2" type="radio" checked>
-        <input class="slider-controls__item" id="btn2" name="toggle2" type="radio">
-        <input class="slider-controls__item" id="btn3" name="toggle2" type="radio">
         <label class="slider-controls__button" for="btn1"></label>
         <label class="slider-controls__button" for="btn2"></label>
         <label class="slider-controls__button" for="btn3"></label>
@@ -199,6 +224,20 @@
 
   <div class="map" id="google-map"></div>
   <!---ID для Google API-->
+  <footer class="main-footer main-footer--index">
+    <div class="main-footer__wrap">
+      <img class="footer__logo" src="img/logo-pink-blue-mobile.svg" alt="Logo">
+      <div class="social-item">
+        <a class="social-item__links social-item__links--twitter" href="#"></a>
+        <a class="social-item__links social-item__links--facebook" href="#"></a>
+        <a class="social-item__links social-item__links--youtube" href="#"></a>
+      </div>
+      <div class="main-footer__build">
+        Разработано
+        <a target="_blank" href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" alt="Logo"></a>
+      </div>
+    </div>
+  </footer>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
   <script>
     function initialize() {
@@ -210,7 +249,7 @@
       }
 
       var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
-      var image = "http://goo.gl/T5bSWm";
+      var image = "img/icon-map-marker.svg";
       var myLatLng = new google.maps.LatLng(59.936278, 30.320935);
 
       var marker = new google.maps.Marker({
@@ -221,8 +260,7 @@
     }
     google.maps.event.addDomListener(window, 'load', initialize);
   </script>
-  <script>
-  </script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

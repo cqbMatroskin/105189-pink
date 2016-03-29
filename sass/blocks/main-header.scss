@@ -1,6 +1,8 @@
 .main-header {
   position: relative;
 
+  padding-bottom: 50px;
+
   background: $dark-blue url("../img/bg-back-mobile.jpg") no-repeat center center;
   background-size: cover;
 
@@ -10,6 +12,16 @@
     @include wrap;
   }
 }
+.main-header--index {
+  padding-bottom: 0;
+}
+
+.main-header__top-line {
+  margin-bottom: 20px;
+  padding: 23px 0;
+
+  background: rgba(0,0,0,0.3);
+}
 
 .main-header__logo {
   position: relative;
@@ -17,47 +29,50 @@
 
   display: block;
   width: 75px;
-  height: 22px;
-
-  background: url("../img/logo-pink-white-mobile.svg") no-repeat center center;
+  min-height: 22px;
 }
 
 .main-header__title {
   box-sizing: border-box;
-  margin-bottom: 30px;
+  margin: 0;
 
   font-weight: 300;
   font-size: $mobile-title;
-  line-height: 34px;
+  line-height: 30px;
   text-align: center;
   color: $white;
 }
-
+.main-header__title--index {
+  margin-bottom: 18px;
+}
 
 @media #{$tablet} {
   .main-header {
-    padding-bottom: 100px;
+    padding-bottom: 108px;
   }
 
   .main-header__top-line {
-    margin-bottom: 170px;
+    margin-bottom: 100px;
+    padding: 26px 0;
+    padding-bottom: 36px;
   }
 
   .main-header__logo {
     width: 147px;
-    height: 40px;
-
-    background: url("../img/logo-pink-white-tablet.svg") no-repeat center center;
   }
   .main-header__title {
     display: inline-block;
     width: 300px;
+    margin-bottom: 31px;
     padding: 0 30px;
+
+    font-size: 40px;
+    line-height: 46px;
   }
 
   .main-header__inner-title {
     display: block;
-    width: 100%;
+    width: 500px;
     margin: 0 auto;
     padding: 0;
 
@@ -66,15 +81,36 @@
   }
 }
 @media #{$desktop} {
+  .main-header {
+    padding-bottom: 90px;
+  }
+
+  .main-header--index {
+    padding-bottom: 117px;
+  }
+  .main-header__top-line--index {
+    margin-bottom: 110px;
+  }
+
   .main-header__logo {
     flex-grow: 1;
-
-    background: url("../img/logo-pink-white-desktop.svg") no-repeat center center;
   }
   .main-header__title {
     display: block;
+    width: 100%;
 
     font-size: $desk-title;
     line-height: 60px;
+  }
+  .main-header__title--index {
+    width: 350px;
+    margin-bottom: 50px;
+    padding-left: 75px;
+  }
+  .interview__note-desktop {
+    display: block;
+  }
+  .interview__note {
+    display: none;
   }
 }

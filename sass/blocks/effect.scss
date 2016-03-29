@@ -5,7 +5,8 @@
 }
 
 .effect {
-  margin-bottom: 45px;
+  margin-bottom: 55px;
+  padding-top: 50px;
 }
 
 .effect__wrap {
@@ -19,24 +20,26 @@
 
 .effect__timer {
   display: block;
-  width: 298px;
-  height: 345px;
-
-  background: url("../img/effect__time.png") no-repeat center center;
-  background-size: contain;
+  flex-basis: 50%;
 }
 
 .effect__item {
-  flex-basis: 320px;
+  flex-basis: 50%;
 }
 
 .effect__title {
+  margin-bottom: 5px;
+
   font-size: 30px;
-  line-height: 40px;
+  line-height: 36px;
 
   span {
     display: block;
   }
+}
+.effect__text {
+  margin: 0;
+  margin-bottom: 15px;
 }
 
 .effect__link {
@@ -44,6 +47,11 @@
 }
 
 @media #{$desktop} {
+  .effect {
+    padding-bottom: 50px;
+
+    background: $bg-gray;
+  }
   .effect__item {
     flex-basis: 570px;
   }

@@ -16,14 +16,25 @@
   justify-content: space-around;
 }
 
+@media #{$mobile} {
+  .main-footer--index {
+    display: none;
+  }
+}
+
 @media #{$tablet} {
   .main-footer__wrap {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 10px;
+    padding-bottom: 35px;
   }
 
   .footer__logo {
     margin-bottom: 0;
+  }
+  .main-footer__build {
+    align-self: flex-end;
   }
 }

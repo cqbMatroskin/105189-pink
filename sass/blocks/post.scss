@@ -1,46 +1,38 @@
 .post {
+  @include wrap;
+}
+
+.post {
   position: relative;
 
-  display: block;
   margin-bottom: 20px;
 
   background: $bg-gray;
 }
+.post--best {
+  margin-top: 70px;
+  padding: 0;
+  .post__photo {
+    width: calc(100% + 12.5%);
+  }
+}
 
 .post__slogan {
+  margin-bottom: 40px;
+
   text-align: center;
   span {
     display: block;
   }
 }
 
-.post-wrap {
-  box-sizing: border-box;
-
-  @include wrap;
-}
 .post__text-comment-wrap {
   padding: 20px 18px;
 }
-
-.post--best {
-  padding: 0;
-
-  background: $white;
-  .post__text-comment-wrap {
-    box-sizing: border-box;
-    padding: 20px 18px;
-
-    background: $bg-gray;
-
-    @include wrap;
-  }
-}
-
 .panorama-title {
   position: absolute;
   top: 0;
-  right: 6.25%;
+  right: 0;
 
   width: 140px;
   padding: 10px 0;
@@ -55,6 +47,10 @@
 }
 
 .post__photo {
+  display: block;
+  max-width: 100% ;
+  margin: 0 auto;
+
   vertical-align: bottom;
 }
 
@@ -96,21 +92,39 @@
 }
 
 @media #{$tablet} {
-  .post__flex-wrap {
+  .post__wrap {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
   }
+
   .post {
-    flex: 0 48%;
+    display: flex;
+    flex-grow: 0;
+    flex-basis: 42.8%;
+    flex-direction: column;
+  }
+
+  .post:nth-child(2n) {
+    margin-left: 5.7%;
+  }
+  .post:nth-child(2n+3) {
+    margin-right: 5.7%;
+  }
+  .post--best {
+    margin-right: 0;
+    margin-left: 0;
   }
   .post--best {
     flex: 1 100%;
+    margin-bottom: 50px;
   }
+
   .post__text-comment-wrap {
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 25px;
   }
   .post__like {
@@ -121,15 +135,35 @@
     margin: 0;
   }
   .post__slogan {
+    display: block;
+    margin-top: 0;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-bottom: 70px;
+    margin-left: auto;
+
     font-size: 18px;
   }
 }
 
 @media #{$desktop} {
   .post:not(.post--best) {
-    flex: 0 30%;
+    flex: 0 25%;
   }
-  .panorama-title {
-    right: 10.83333%;
+  .post:nth-child(2n) {
+    margin-left: 0;
+  }
+  .post:nth-child(2n+3) {
+    margin-right: 1.5%;
+  }
+  .post:nth-child(3n+2) {
+    margin-left: 10.83%;
+  }
+  .post:nth-child(3n+4) {
+    margin-right: 10.83%;
+  }
+  .post--best {
+    margin-right: 0;
+    margin-left: 0;
   }
 }

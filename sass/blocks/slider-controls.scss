@@ -17,25 +17,57 @@
   vertical-align: middle;
 
   background: rgba(0,0,0,0.3);
+  border: 3px solid #ffffff;
   border-radius: 50%;
 }
 
-#btn_1:checked ~ label[for="btn_1"],
-#btn_2:checked ~ label[for="btn_2"],
-#btn_3:checked ~ label[for="btn_3"] {
+.slider-controls__button:last-child {
+  margin-right: 0;
+}
+
+#btn_1:checked ~ .slider-controls [for="btn_1"],
+#btn_2:checked ~ .slider-controls [for="btn_2"],
+#btn_3:checked ~ .slider-controls [for="btn_3"] {
   display: inline-block;
-  width: 12px;
-  height: 12px;
+  width: 6px;
+  height: 6px;
 
   vertical-align: middle;
 
   background-color: transparent;
-  border: 3px solid $base-color;
-  border-radius: 50%;;
+  border-color: $base-color;
+  border-radius: 50%;
 }
 
-#btn_1:checked ~ .reviews__items #slide_1,
-#btn_2:checked ~ .reviews__items #slide_2,
-#btn_3:checked ~ .reviews__items #slide_3 {
+#btn_1:checked ~ #slide_1,
+#btn_2:checked ~ #slide_2,
+#btn_3:checked ~ #slide_3 {
   display: block;
+}
+
+
+.price-list .slider-controls__button {
+  border-color: $bg-gray;
+}
+
+#btn1:checked ~ .slider-controls [for="btn1"],
+#btn2:checked ~ .slider-controls [for="btn2"],
+#btn3:checked ~ .slider-controls [for="btn3"] {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+
+  vertical-align: middle;
+
+  background-color: transparent;
+  border-color: $base-color;
+  border-radius: 50%;
+}
+@media #{$tablet} {
+  #btn_1:checked ~ #slide_1,
+  #btn_2:checked ~ #slide_2,
+  #btn_3:checked ~ #slide_3 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }

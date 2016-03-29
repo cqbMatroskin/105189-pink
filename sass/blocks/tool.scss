@@ -4,16 +4,14 @@
   padding-bottom: 40px;
 
   background: $bg-gray;
-  .tool__wrap,
-  .tool__wrap-photo {
-    @include wrap;
-  }
 }
 .tool__photo {
   display: block;
   margin: 0 auto;
 }
 .tool__instrument {
+  position: relative;
+
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -23,6 +21,7 @@
 }
 .tool__crop {
   display: inline-block;
+  order: 1;
   width: 45px;
   height: 45px;
 
@@ -45,20 +44,72 @@
   background: url("../img/icon-editor-contrast.svg") no-repeat center center;
 }
 
+.tool__row:nth-child(2) {
+  order: 2;
+}
+
+.tool__row:nth-child(3) {
+  order: 3;
+}
+
 @media #{$tablet} {
-  .tool {
+  .tool__flex-wrap {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
+
+    @include wrap;
   }
-  .tool__wrap-photo,
-  .tool__wrap-instrument,
-  .tool-button {
-    flex: 1 50%;
+  .tool {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .tool__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #dddfe0;
+  }
+  .range-controls {
+    margin-bottom: 0;
+  }
+  .tool__wrap-photo {
+    flex-basis: 50%;
+
+    .tool__photo {
+      margin: 0;
+    }
   }
   .tool__instrument {
+    margin: 0;
+    padding: 0;
+  }
+  .tool__wrap-instrument {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0;
     padding-top: 0;
+  }
+}
+
+@media #{$desktop} {
+  .tool {
+    @include wrap;
+  }
+  .tool {
+    margin-bottom: 90px;
+  }
+  .tool__row {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
   }
 }
