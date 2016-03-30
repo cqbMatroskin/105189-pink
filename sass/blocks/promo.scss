@@ -139,6 +139,13 @@
   .promo {
     padding-top: 0;
   }
+
+  .promo::before {
+    content: "";
+
+    height: 26vh;
+  }
+
   .promo__title {
     margin-bottom: 80px;
     padding-top: 65px;
