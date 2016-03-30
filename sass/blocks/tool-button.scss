@@ -1,3 +1,46 @@
 .tool-button {
-  @include outline;
+  padding-top: 40px;
+
+  text-align: center;
+
+  border-top: 1px solid rgba(40,54,69,0.1);
+}
+.btn-transparent--post {
+  margin-bottom: 15px;
+
+  color: $pink;
+
+  border-color: $pink;
+}
+.btn-transparent--cancel {
+  color: rgba(40,54,69,0.1);
+
+  border-color: rgba(40,54,69,0.1);
+}
+
+@media #{$tablet} {
+  .tool-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+
+    border: 0;
+  }
+  .btn-transparent--post,
+  .btn-transparent--cancel {
+    width: 80%;
+  }
+}
+@media #{$desktop} {
+  .tool-button {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .btn-transparent--post,
+  .btn-transparent--cancel {
+    width: 39.3%;
+    margin-bottom: 0;
+  }
 }

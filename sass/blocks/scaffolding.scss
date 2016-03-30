@@ -1,0 +1,29 @@
+body {
+  font: 14px/24px $font;
+  font-weight: normal;
+  color: $base-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+img {
+  max-width: 100%;
+}
+@media #{$mobile} {
+}
+
+@media #{$tablet} {
+}
+
+@media #{$desktop} {
+  body {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}

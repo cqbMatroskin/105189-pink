@@ -1,3 +1,25 @@
 @mixin outline() {
   outline: 1px solid red;
 }
+
+@mixin clearfix {
+  &:after {
+    content: "";
+
+    display: table;
+    clear: both;
+  }
+}
+
+
+@mixin wrap {
+  width: 87.5%;
+  margin: 0 auto;
+
+  @media #{$tablet} {
+    width: 88.5%;
+  }
+  @media #{$desktop} {
+    width: 78.33333%;
+  }
+}

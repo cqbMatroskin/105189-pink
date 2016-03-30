@@ -1,23 +1,45 @@
+/*--GLOBAL--*/
 @import "global/normalize.scss";
 @import "mixins.scss";
-@import "blocks/application.scss";
-@import "blocks/btn-transparent.scss";
-@import "blocks/contacts.scss";
-@import "blocks/header-iphone.scss";
-@import "blocks/inner-subtitle.scss";
-@import "blocks/map.scss";
-@import "blocks/main-footer.scss";
+@import "variables.scss";
+@import "global/fonts.scss";
+@import "blocks/scaffolding.scss";
+
+
+/*---INDEX.HTML---*/
 @import "blocks/main-header.scss";
+@import "blocks/header-iphone.scss";
+@import "blocks/application.scss";
+@import "blocks/promo.scss";
+@import "blocks/effect.scss";
+@import "blocks/reviews.scss";
+@import "blocks/price-list.scss";
+@import "blocks/contacts.scss";
+
+
+/*-SLIDER-*/
+@import "blocks/slider-controls.scss";
+
+/*---FORM.HTML---*/
+@import "global/form.scss";
+
+/*---NAVIGATION---*/
 @import "blocks/main-nav.scss";
+
+/*-BUTTON-*/
+@import "blocks/btn-transparent.scss";
+
+/*-MAP-*/
+@import "blocks/map.scss";
+
+
 @import "blocks/page-content.scss";
 @import "blocks/popup.scss";
 @import "blocks/post.scss";
-@import "blocks/price-list.scss";
-@import "blocks/promo.scss";
 @import "blocks/range-controls.scss";
-@import "blocks/reviews.scss";
 @import "blocks/slider-controls.scss";
 @import "blocks/social-item.scss";
 @import "blocks/tool.scss";
 @import "blocks/tool-button.scss";
-@import "global/form.scss";
+@import "blocks/inner-subtitle.scss";
+@import "blocks/main-footer.scss";

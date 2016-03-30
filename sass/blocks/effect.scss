@@ -1,0 +1,67 @@
+@media #{$mobile} {
+  .effect {
+    display: none;
+  }
+}
+
+.effect {
+  margin-bottom: 55px;
+  padding-top: 50px;
+}
+
+.effect__wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  @include wrap;
+}
+
+.effect__timer {
+  display: block;
+  flex-basis: 50%;
+}
+
+.effect__item {
+  flex-basis: 50%;
+}
+
+.effect__title {
+  margin-bottom: 5px;
+
+  font-size: 30px;
+  line-height: 36px;
+
+  span {
+    display: block;
+  }
+}
+.effect__text {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.effect__link {
+  color: $pink;
+}
+
+@media #{$desktop} {
+  .effect {
+    padding-bottom: 50px;
+
+    background: $bg-gray;
+  }
+  .effect__item {
+    flex-basis: 570px;
+  }
+
+  .effect__title span {
+    display: inline;
+  }
+
+  .effect__text {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}

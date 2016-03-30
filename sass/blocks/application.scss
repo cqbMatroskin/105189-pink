@@ -1,3 +1,62 @@
 .application {
-  @include outline;
+  position: relative;
+  z-index: 3;
+
+  display: flex;
+  flex-flow: column wrap;
+
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: $white;
+
+  &__wrap {
+    @include wrap;
+  }
+}
+
+.application__icons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+@media #{$mobile} {
+  .application {
+    padding: 28px 0;
+
+    font-size: 14px;
+
+    background: $dark-blue;
+  }
+}
+
+@media #{$tablet} {
+  .application {
+    align-items: flex-start;
+    width: 48.3%;
+    margin-left: 3%;
+  }
+
+  .application__icons {
+    margin-top: 46px;
+    margin-bottom: 28px;
+
+    line-height: 24px;
+  }
+}
+
+@media #{$desktop} {
+  .application__wrap {
+    box-sizing: border-box;
+    padding: 0 50px;
+  }
+  .application__icons {
+    margin-top: 70px;
+    margin-bottom: 43px;
+  }
 }

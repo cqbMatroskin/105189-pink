@@ -1,3 +1,73 @@
 .slider-controls {
-  @include outline;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.slider-controls__item {
+  display: none;
+}
+
+.slider-controls__button {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 10px;
+
+  vertical-align: middle;
+
+  background: rgba(0,0,0,0.3);
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+}
+
+.slider-controls__button:last-child {
+  margin-right: 0;
+}
+
+#btn_1:checked ~ .slider-controls [for="btn_1"],
+#btn_2:checked ~ .slider-controls [for="btn_2"],
+#btn_3:checked ~ .slider-controls [for="btn_3"] {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+
+  vertical-align: middle;
+
+  background-color: transparent;
+  border-color: $base-color;
+  border-radius: 50%;
+}
+
+#btn_1:checked ~ #slide_1,
+#btn_2:checked ~ #slide_2,
+#btn_3:checked ~ #slide_3 {
+  display: block;
+}
+
+
+.price-list .slider-controls__button {
+  border-color: $bg-gray;
+}
+
+#btn1:checked ~ .slider-controls [for="btn1"],
+#btn2:checked ~ .slider-controls [for="btn2"],
+#btn3:checked ~ .slider-controls [for="btn3"] {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+
+  vertical-align: middle;
+
+  background-color: transparent;
+  border-color: $base-color;
+  border-radius: 50%;
+}
+@media #{$tablet} {
+  #btn_1:checked ~ #slide_1,
+  #btn_2:checked ~ #slide_2,
+  #btn_3:checked ~ #slide_3 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }

@@ -1,3 +1,202 @@
 .promo {
-  @include outline;
+  position: relative;
+  z-index: 5;
+
+  padding-top: 113px;
+  overflow: hidden;
+
+  background: $bg-gray;
+  &__wrap {
+    position: relative;
+
+    @include wrap;
+  }
+}
+
+.promo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 11vh;
+
+  background: url("../img/bg-triangle-white.svg") no-repeat left center;
+  background-size: cover;
+}
+
+.promo__title {
+  margin-bottom: 0;
+  padding-top: 46px;
+
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  span {
+    display: block;
+    margin-top: 28px;
+  }
+}
+.promo__item {
+  margin-bottom: 30px;
+}
+
+.promo__item-title {
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  font-size: 18px;
+  color: $black;
+}
+.promo__slogan-text {
+  margin: 0;
+}
+
+.promo__iphone {
+  position: absolute;
+  bottom: -40px;
+
+  width: 157px;
+  height: 320px;
+  margin: 0 auto;
+}
+
+@media #{$mobile} {
+  .promo {
+    text-align: center;
+    &__wrap {
+      position: relative;
+
+      padding-bottom: 290px;
+
+      @include wrap;
+    }
+  }
+
+  .promo__iphone {
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+  .promo__iphone-1,
+  .promo__iphone-2 {
+    display: none;
+  }
+}
+
+@media #{$tablet} {
+  .promo__wrap {
+    display: flex;
+    flex-flow: column wrap;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+
+  .promo {
+    padding-top: 15px;
+  }
+
+  .promo__title {
+    font-size: $tablet-title;
+    line-height: 50px;
+    span {
+      margin-top: 0;
+      margin-bottom: 32px;
+    }
+  }
+
+  .promo__items {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .promo__list {
+    display: flex;
+    flex-basis: 51.6%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 42px;
+  }
+  .promo__iphone-wrap {
+    flex-basis: 48.4%;
+    height: 485px;
+    overflow: hidden;
+  }
+
+  .promo__iphone {
+    position: static;
+    bottom: auto;
+
+    width: 268px;
+    height: 548px;
+  }
+}
+
+@media #{$desktop} {
+  .promo {
+    padding-top: 0;
+  }
+  .promo__title {
+    margin-bottom: 80px;
+    padding-top: 65px;
+
+    font-size: $desk-title;
+    line-height: 60px;
+  }
+
+  .promo__items {
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+  }
+
+  .promo__iphone-wrap {
+    display: flex;
+    flex-grow: 0;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  .promo__iphone-1,
+  .promo__iphone-2,
+  .promo__iphone {
+    display: block;
+    width: 186px;
+    height: 300px;
+    overflow: hidden;
+  }
+
+
+  .promo__iphone {
+    margin: 0;
+  }
+
+  .promo__list {
+    flex-grow: 0;
+    flex-basis: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .promo__item {
+    flex-basis: 255px;
+
+    text-align: center;
+  }
+
+  .promo__item-title {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .promo__slogan-text {
+    font-size: 18px;
+    line-height: 28px;
+  }
 }

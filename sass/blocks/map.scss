@@ -1,3 +1,26 @@
-.map {
-  @include outline;
+  .map {
+  position: relative;
+
+  min-height: 300px;
+}
+
+.map::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  width: 100%;
+  height: 10vw;
+
+  background: url("../img/bg-triangle-white-footer.svg") no-repeat center center;
+  background-size: 100%;
+}
+
+@media #{$tablet} {
+  .map {
+    height: 380px;
+    margin-bottom: 25px;
+  }
 }
