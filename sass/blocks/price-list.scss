@@ -100,6 +100,9 @@ th {
 
     text-transform: capitalize;
   }
+  .price-list .slider-controls {
+    display: none;
+  }
 }
 
 @media #{$desktop} {
@@ -107,10 +110,12 @@ th {
     padding-top: 125px;
     padding-bottom: 90px;
   }
+  .price-list::before {
+    content: "";
+
+    height: 26vh;
+  }
   .price__table td {
     padding: 10px;
-  }
-  .price-list .slider-controls {
-    display: none;
   }
 }
