@@ -1,9 +1,12 @@
 .header-iphone {
   display: block;
-  min-width: 258px;
-  min-height: 286px;
+  // min-width: 258px;
+  // min-height: 286px;
+  // background: url("../img/iphone-hand-mobile.png") no-repeat left center;
 
-  background: url("../img/iphone-hand-mobile.png") no-repeat left center;
+  img {
+    vertical-align: bottom;
+  }
 }
 
 @media #{$tablet} {
@@ -12,22 +15,24 @@
     right: 0;
     bottom: 0;
     left: 0;
+    // height: 545px;
 
-    height: 545px;
     margin: 0 auto;
 
-    background: url("../img/iphone-hand-tablet.png") no-repeat right center;
-
     @include wrap;
+    // background: url("../img/iphone-hand-tablet.png") no-repeat right center;
+    img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
   }
 }
 
 @media #{$desktop} {
   .header-iphone {
-    height: 645px;
-
-    background: url("../img/iphone-hand-desktop.png") no-repeat 90% center;
-
+    // height: 645px;
+    // background: url("../img/iphone-hand-desktop.png") no-repeat 90% center;
     @include wrap;
   }
 }

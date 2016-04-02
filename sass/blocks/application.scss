@@ -15,6 +15,15 @@
     @include wrap;
   }
 }
+.application__btn:hover {
+  color: $pink;
+
+  background: $white;
+}
+
+.application__btn:active {
+  color: rgba(210,40,86,0.3);
+}
 
 .application__icons {
   display: flex;

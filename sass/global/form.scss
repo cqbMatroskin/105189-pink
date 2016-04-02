@@ -72,6 +72,8 @@ fieldset:nth-child(2n) {
 :-ms-input-placeholder {
   color: $base-color;
 }
+
+
 .form__achievements {
   display: flex;
   flex-direction: column;
@@ -179,24 +181,13 @@ fieldset:nth-child(2n) {
     line-height: 30px;
 
     border: 2px solid #e5e5e5;
+    outline: none;
   }
   .fieldset-title {
     margin-bottom: 15px;
   }
 }
-.btn {
-  padding: 20px 30px;
 
-  font-weight: 700;
-  font-size: 18px;
-  color: $white;
-  text-transform: uppercase;
-
-  background: $green;
-  border: 0;
-  border-radius: 2px;
-  outline: none;
-}
 .form__submit-wrap {
   display: flex;
   flex-direction: column;
@@ -215,6 +206,12 @@ fieldset:nth-child(2n) {
 }
 .btn--submit {
   padding: 20px 0;
+}
+.btn--submit:disabled {
+  background: #e5e5e5;
+}
+.btn--submit:disabled:hover {
+  background: #e5e5e5;
 }
 @media #{$tablet} {
   fieldset:nth-child(2n) {
@@ -464,4 +461,19 @@ fieldset:nth-child(2n) {
       display: inline;
     }
   }
+}
+
+/*-HOVER-*/
+.form-input-text:hover,
+textarea:hover,
+.form-radio-label:hover::before,
+.form-label-checkbox:hover::before {
+  border-color: $base-color;
+}
+
+.form-input-text:focus,
+textarea:focus,
+.form-radio-label:active::before,
+.form-label-checkbox:active::before {
+  border-color: $pink;
 }

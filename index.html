@@ -14,8 +14,8 @@
       <div class="main-header__wrap">
         <a class="main-header__logo" href="index.html">
           <picture>
-            <source media="(min-width: 1200px)" srcset="img/logo-pink-blue-mobile.svg">
-            <source media="(min-width: 700px)" srcset="img/logo-pink-blue-mobile.svg">
+            <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 700px)" srcset="img/logo-pink-white-tablet.svg">
             <img src="img/logo-pink-white-mobile.svg" alt="PINK">
           </picture>
         </a>
@@ -43,7 +43,13 @@
     <div class="main-header__wrap">
       <h1 class="main-header__title main-header__title--index">Взгляните на жизнь иначе!</h1>
     </div>
-    <div class="header-iphone"></div>
+    <div class="header-iphone">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/iphone-hand-desktop.png, img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
+        <source media="(min-width: 700px)" srcset="img/iphone-hand-tablet.png, img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
+        <img src="img/iphone-hand-mobile.png" srcset="img/iphone-hand-mobile@2x.png" alt="Iphone">
+      </picture>
+    </div>
     <section class="application">
       <div class="application__wrap">
         <a class="btn-transparent application__btn" target="_blank" href="https://www.appstore.com">Скачать приложение</a>
@@ -84,9 +90,19 @@
           </article>
         </div>
         <div class="promo__iphone-wrap">
-          <div class="promo__iphone"><img src="img/iphone-screen-desktop_3.png" alt="Iphone"></div>
-          <div class="promo__iphone-2"><img src="img/iphone-screen-desktop_2.png" alt="Iphone"></div>
-          <div class="promo__iphone-1"><img src="img/iphone-screen-desktop_1.png" alt="Iphone"></div>
+          <div class="promo__iphone">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/iphone-screen-desktop-3@1x.png 1x, img/iphone-screen-desktop-3@2x.png 2x">
+              <source media="(min-width: 700px)" srcset="img/iphone-screen-tablet-3@1x.png 1x, img/iphone-screen-tablet-3@2x.png">
+              <img src="img/iphone-screen-mobile.png" srcset="img/iphone-screen-mobile@2x.png 2x" alt="Iphone">
+            </picture>
+          </div>
+          <div class="promo__iphone-2">
+            <img src="img/iphone-screen-desktop_2.png" srcset="img/iphone-screen-desktop-2@1x.png 1x, img/iphone-screen-desktop-2@2x.png 2x" alt="Iphone">
+          </div>
+          <div class="promo__iphone-1">
+              <img src="img/iphone-screen-desktop_1.png" srcset="img/iphone-screen-desktop-1@1x.png 1x, img/iphone-screen-desktop-1@2x.png 2x" alt="Iphone">
+          </div>
         </div>
       </div>
     </div>
@@ -212,7 +228,7 @@
         </div>
         <div class="contacts__items">
           <h3>Пишите:</h3>
-          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <a class="contacts__mailto" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </div>
         <div class="contacts__items">
           <h3>Приезжайте в гости:</h3> ул. Большая

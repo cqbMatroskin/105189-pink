@@ -1,0 +1,23 @@
+.btn {
+  padding: 20px 30px;
+
+  font-weight: 700;
+  font-size: 18px;
+  color: $white;
+  text-transform: uppercase;
+
+  background: $green;
+  border: 0;
+  border-radius: 2px;
+  outline: none;
+
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background: #1c9b5e;
+}
+
+.btn:active {
+  color: rgba(255, 255, 255, 0.3);
+}

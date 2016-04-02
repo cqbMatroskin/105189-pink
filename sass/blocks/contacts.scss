@@ -37,6 +37,17 @@
     color: $pink;
     text-decoration: none;
   }
+  .contacts__mailto:hover {
+    color: $base-color;
+
+    border-bottom: 1px solid $base-color;
+  }
+
+  .contacts__mailto:active {
+    color: rgba(40,54,69,0.3);
+
+    border-bottom: 0;
+  }
 }
 
 @media #{$tablet} {

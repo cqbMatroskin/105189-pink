@@ -27,6 +27,9 @@
   transform: translateY(-50%);
   cursor: pointer;
 }
+.range-controls__toggle:active {
+  background: $pink;
+}
 .range-controls {
   flex-basis: 100%;
 }
