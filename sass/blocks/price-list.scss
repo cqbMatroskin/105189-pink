@@ -14,6 +14,18 @@
     @include wrap;
   }
 }
+.col-img {
+  text-align: center;
+  svg {
+    vertical-align: middle;
+  }
+  .icon--yes {
+    fill: $green;
+  }
+  .icon--no {
+    fill: $red;
+  }
+}
 .price-list::before {
   content: "";
   position: absolute;
@@ -46,18 +58,27 @@
 
 .price__hit {
   position: relative;
+
+  overflow: hidden;
 }
 
 .price__hit-label {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10px;
+  left: -25px;
   z-index: 5;
 
-  width: 73px;
-  height: 73px;
+  width: 90px;
+  height: 25px;
 
-  background: url("../img/bg-hit.svg") no-repeat center center;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: center;
+  color: $white;
+  text-transform: uppercase;
+
+  background-color: $pink;
+  transform: rotate(-45deg);
 }
 
 th {

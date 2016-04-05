@@ -24,9 +24,10 @@
   position: relative;
   z-index: 12;
 
-  display: block;
-  // width: 75px;
-  // min-height: 22px;
+  display: inline-block;
+}
+.main-header__logo path {
+  fill: #000000;
 }
 
 .main-header__logo img:hover {

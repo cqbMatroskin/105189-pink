@@ -80,3 +80,9 @@
     flex-direction: column-reverse;
   }
 }
+
+@media #{$desktop} {
+  .slider-controls {
+    display: none;
+  }
+}

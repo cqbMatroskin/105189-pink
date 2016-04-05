@@ -5,7 +5,9 @@
     @include wrap;
   }
 }
-
+.reviews__arrow {
+  display: none;
+}
 .reviews__slide {
   display: none;
 
@@ -71,6 +73,31 @@
 
     background: url("../img/quotes.png") no-repeat center center;
     transform: translateX(-50%);
+  }
+  .reviews__arrow {
+    position: absolute;
+    top: 40%;
+    left: 0;
+
+    display: block;
+
+    cursor: pointer;
+
+    fill: rgba(40,54,69, 0.3);
+  }
+  .reviews__arrow--left {
+    right: 0;
+    left: auto;
+
+    transform: scale(-1);
+  }
+
+  .reviews__arrow:hover {
+    fill: $base-color;
+  }
+
+  .reviews__arrow:active {
+    fill: rgba(40,54,69, 0.1);
   }
   .reviews__slide {
     align-items: center;

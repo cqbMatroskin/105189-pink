@@ -22,27 +22,29 @@
 .tool__crop {
   display: inline-block;
   order: 1;
-  width: 45px;
-  height: 45px;
 
-  background: url("../img/icon-editor-crop.svg") no-repeat center center;
+  fill: rgba(40,54,69, 0.3);
 }
 
-.tool__color {
-  display: inline-block;
-  width: 45px;
-  height: 45px;
-
-  background: url("../img/icon-editor-fill.svg") no-repeat center center;
-}
-
+.tool__color,
 .tool__brightness {
   display: inline-block;
-  width: 45px;
-  height: 45px;
 
-  background: url("../img/icon-editor-contrast.svg") no-repeat center center;
+  fill: rgba(40,54,69, 0.3);
 }
+
+.tool__crop:hover,
+.tool__color:hover,
+.tool__brightness:hover {
+  fill: rgba(40,54,69, 0.5);
+}
+
+.tool__crop:active,
+.tool__color:active,
+.tool__brightness:active {
+  fill: $pink;
+}
+
 
 .tool__row:nth-child(2) {
   order: 2;

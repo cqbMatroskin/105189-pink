@@ -12,6 +12,8 @@
 .post--best {
   margin-top: 70px;
   padding: 0;
+
+  background: $white;
   .post__photo {
     width: calc(100% + 12.5%);
   }
@@ -29,10 +31,20 @@
 .post__text-comment-wrap {
   padding: 20px 18px;
 }
+
+.post__text-comment-wrap--first {
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  background: $bg-gray;
+
+  @include wrap;
+}
+
 .panorama-title {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 6.25%;
 
   width: 140px;
   padding: 10px 0;
@@ -48,6 +60,7 @@
 
 .post__photo {
   display: block;
+  width: 100%;
   max-width: 100% ;
   margin: 0 auto;
 
@@ -84,11 +97,9 @@
 }
 .icon-heart {
   display: inline-block;
-  width: 15px;
-  height: 13px;
   margin-right: 18px;
 
-  background: url("../img/icon-heart.svg") no-repeat center center;
+  fill: $pink;
 }
 
 @media #{$tablet} {
@@ -147,6 +158,10 @@
 }
 
 @media #{$desktop} {
+  .panorama-title {
+    top: 10.6%;
+    right: 10.83333%;
+  }
   .post:not(.post--best) {
     flex: 0 25%;
   }
@@ -165,5 +180,16 @@
   .post--best {
     margin-right: 0;
     margin-left: 0;
+  }
+  .post__text-comment-wrap--first {
+    position: relative;
+    .post__like {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+    }
+    .icon-heart {
+      margin-left: 15px;
+    }
   }
 }

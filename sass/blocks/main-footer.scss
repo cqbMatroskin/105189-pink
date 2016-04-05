@@ -16,6 +16,18 @@
   justify-content: space-around;
 }
 
+.main-footer__logo-academy {
+  fill: $pink;
+}
+
+.main-footer__logo-academy:hover {
+  fill: $base-color;
+}
+
+.main-footer__logo-academy:active {
+  fill: rgba(40,54,69,0.3);
+}
+
 @media #{$mobile} {
   .main-footer--index {
     display: none;
