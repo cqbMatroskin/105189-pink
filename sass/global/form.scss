@@ -286,11 +286,14 @@ fieldset:nth-child(2n) {
       display: inline-block;
     }
     .form__row-tablet {
+      position: relative;
+
       display: flex;
       flex-direction: column;
       align-items: stretch;
       margin-bottom: 25px;
     }
+
     .form__row-tablet:last-child {
       margin-bottom: 10px;
     }
@@ -299,6 +302,27 @@ fieldset:nth-child(2n) {
     }
     .form__row {
       display: none;
+    }
+  }
+  .form__icon-phone {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    cursor: pointer;
+    svg {
+      fill: $pink;
+    }
+  }
+
+  .form__icon-mail {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    cursor: pointer;
+    svg {
+      fill: $pink;
     }
   }
   .form__achievements {
@@ -415,24 +439,16 @@ fieldset:nth-child(2n) {
       flex: 1 33.33333%;
       margin-bottom: 15px;
     }
-    //   .form__row:nth-child(1) {
-    //     order: 4;
-    //   }
-    //   .form__row:nth-child(2) {
-    //     order: -1;
-    //   }
+
     .form__row:nth-child(3) {
       order: 2;
     }
     .form__row:nth-child(4) {
       order: 4;
     }
-    //   .form__row:nth-child(5) {
-    //     order: 3;
-    //   }
-    //   .form__row:nth-child(6) {
-    //     order: 6;
-    //   }
+  }
+  .form__icon-mail {
+    top: 15px;
   }
   .form__emotions {
     flex: 1 100%;

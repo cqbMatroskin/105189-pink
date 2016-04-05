@@ -22,8 +22,19 @@
 .tool__crop {
   display: inline-block;
   order: 1;
+  width: 44px;
+  height: 44px;
 
-  fill: rgba(40,54,69, 0.3);
+  fill: $pink;
+}
+
+.tool__color {
+  width: 48px;
+  height: 43px;
+}
+.tool__brightness {
+  width: 32px;
+  height: 32px;
 }
 
 .tool__color,
@@ -84,7 +95,9 @@
   }
   .tool__wrap-photo {
     flex-basis: 50%;
-
+    a {
+      display: inline-block;
+    }
     .tool__photo {
       margin: 0;
     }
@@ -101,6 +114,21 @@
     margin-bottom: 0;
     padding-top: 0;
   }
+  .tool__crop {
+    width: 22px;
+    height: 22px;
+
+    fill: rgba(40,54,69, 0.3);
+  }
+
+  .tool__color {
+    width: 24px;
+    height: 22px;
+  }
+  .tool__brightness {
+    width: 22px;
+    height: 16px;
+  }
 }
 
 @media #{$desktop} {
@@ -113,5 +141,18 @@
   .tool__row {
     margin-bottom: 10px;
     padding-bottom: 10px;
+  }
+  .tool__crop {
+    width: 44px;
+    height: 44px;
+  }
+
+  .tool__color {
+    width: 44px;
+    height: 43px;
+  }
+  .tool__brightness {
+    width: 44px;
+    height: 32px;
   }
 }

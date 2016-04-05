@@ -20,12 +20,15 @@
     "gulp": "3.9.1",
     "gulp-csso": "^1.1.0",
     "gulp-imagemin": "^2.4.0",
+    "gulp-jsmin": "^0.1.5",
     "gulp-plumber": "1.1.0",
     "gulp-postcss": "6.1.0",
     "gulp-rename": "^1.2.2",
+    "gulp-rimraf": "^0.2.0",
     "gulp-sass": "2.2.0",
     "gulp-svgmin": "^1.2.2",
-    "gulp-svgstore": "^6.0.0"
+    "gulp-svgstore": "^6.0.0",
+    "merge-stream": "^1.0.0"
   },
   "scripts": {
     "test": "editorconfig-tools check *",

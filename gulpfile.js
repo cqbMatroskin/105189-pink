@@ -14,8 +14,17 @@ var path = require("path");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var svgmin = require("gulp-svgmin");
+var rimraf = require("gulp-rimraf");
+var merge = require("merge-stream");
+var minjs = require("gulp-jsmin");
 
-gulp.task("style", function() {
+
+
+gulp.task("clean", function (cb) {
+  rimraf('./build', cb);
+});
+
+gulp.task("style", ["clean"], function() {
   gulp.src("sass/style.scss")
     .pipe(plumber())
     .pipe(sass())
@@ -34,25 +43,52 @@ gulp.task("style", function() {
       })
     ]))
     .pipe(gulp.dest("css"))
-    // .pipe(minify())
-    // .pipe(rename("style.min.css"))
-    // .pipe(gulp.dest("css"))
+    .pipe(minify())
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest("css"))
     .pipe(server.reload({
       stream: true
     }));
 });
 
-gulp.task("serve", ["style"], function() {
-  server.init({
-    server: ".",
-    notify: false,
-    open: true,
-    ui: false
-  });
-
-  gulp.watch("sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("*.html").on("change", server.reload);
+gulp.task("minjs", ["style"], function() {
+  return gulp.src("js/*.js")
+    .pipe(jsmin())
+    .pipe(rename("js.min.js"))
+    .pipe(gulp.dest("build/js"))
 });
+
+gulp.task("copy", ["minjs"], function() {
+  var html = gulp.src("*.html")
+  .pipe(gulp.dest("build"));
+
+  var css = gulp.src("css/**/*.css")
+  .pipe(gulp.dest("build/css"));
+
+  var fonts = gulp.src("fonts/**/*{woff, woff2}")
+  .pipe(gulp.dest("build/fonts"));
+
+  var js = gulp.src("js/**/*.js")
+  .pipe(gulp.dest("build/js"));
+
+  return merge(html, css, fonts, js);
+});
+
+gulp.task("build", ["copy"], function() {
+});
+
+// gulp.task("serve", ["style"], function() {
+//   server.init({
+//     server: ".",
+//     notify: false,
+//     open: true,
+//     ui: false
+//   });
+//
+//   gulp.watch("sass/**/*.{scss,sass}", ["style"]);
+//   gulp.watch("*.html").on("change", server.reload);
+// });
+
 
 gulp.task("images", function() {
   return gulp.src("img/**/*.{png,jpg,gif}")
@@ -63,6 +99,7 @@ gulp.task("images", function() {
 
   .pipe(gulp.dest("img"));
 });
+
 
 gulp.task("svgstore", function() {
   return gulp.src("img/icons/*.svg")

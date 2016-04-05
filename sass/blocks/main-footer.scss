@@ -8,6 +8,22 @@
 }
 .footer__logo {
   margin-bottom: 40px;
+
+  fill: $base-color;
+}
+
+.footer__logo:hover {
+  fill: $pink;
+}
+
+.footer__logo:active {
+  opacity: 0.3;
+
+  fill: $base-color;
+}
+
+.footer__logo--desktop {
+  display: none;
 }
 
 .main-footer__build {
@@ -15,6 +31,7 @@
   flex-direction: row;
   justify-content: space-around;
 }
+
 
 .main-footer__logo-academy {
   fill: $pink;
@@ -32,6 +49,9 @@
   .main-footer--index {
     display: none;
   }
+  .main-footer__logo-academy--desktop {
+    display: block;
+  }
 }
 
 @media #{$tablet} {
@@ -48,5 +68,16 @@
   }
   .main-footer__build {
     align-self: flex-end;
+  }
+}
+
+@media #{$desktop} {
+  .footer__logo {
+    display: none;
+  }
+  .footer__logo--desktop {
+    display: block;
+
+    fill: $base-color;
   }
 }
