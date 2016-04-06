@@ -1,8 +1,5 @@
 
 @media #{$mobile}, #{$tablet} {
-  .main-header__logo {
-    display: inline-block;
-  }
   .main-nav--closed {
     display: none;
   }
@@ -154,22 +151,21 @@
   .main-nav__list {
     padding-top: 110px;
   }
+  .main-nav__toggle {
+    top: 16px;
+  }
 }
 
 @media #{$desktop} {
   .main-nav {
-    padding-right: 10.83333%;
-  }
-
-  .main-header__logo {
-    width: 100%;
-  }
-  .main-nav {
     position: static;
 
     display: block;
+    align-self: flex-end;
     width: 62.5%;
+    padding-right: 10.83333%;
   }
+
   .main-nav__toggle {
     display: none;
   }

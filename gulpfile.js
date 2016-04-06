@@ -16,7 +16,7 @@ var imagemin = require("gulp-imagemin");
 var svgmin = require("gulp-svgmin");
 var rimraf = require("gulp-rimraf");
 var merge = require("merge-stream");
-var minjs = require("gulp-jsmin");
+var uglify = require("gulp-uglify");
 
 
 
@@ -24,8 +24,8 @@ gulp.task("clean", function (cb) {
   rimraf('./build', cb);
 });
 
-gulp.task("style", ["clean"], function() {
-  gulp.src("sass/style.scss")
+gulp.task("style", function() {
+   gulp.src("sass/style.scss")
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
@@ -51,14 +51,14 @@ gulp.task("style", ["clean"], function() {
     }));
 });
 
-gulp.task("minjs", ["style"], function() {
+gulp.task("minjs", function() {
   return gulp.src("js/*.js")
-    .pipe(jsmin())
+    .pipe(uglify())
     .pipe(rename("js.min.js"))
     .pipe(gulp.dest("build/js"))
 });
 
-gulp.task("copy", ["minjs"], function() {
+gulp.task("copy", function() {
   var html = gulp.src("*.html")
   .pipe(gulp.dest("build"));
 
@@ -74,20 +74,20 @@ gulp.task("copy", ["minjs"], function() {
   return merge(html, css, fonts, js);
 });
 
-gulp.task("build", ["copy"], function() {
+gulp.task("build", ["clean", "style", "minjs", "copy"], function() {
 });
 
-// gulp.task("serve", ["style"], function() {
-//   server.init({
-//     server: ".",
-//     notify: false,
-//     open: true,
-//     ui: false
-//   });
-//
-//   gulp.watch("sass/**/*.{scss,sass}", ["style"]);
-//   gulp.watch("*.html").on("change", server.reload);
-// });
+gulp.task("serve", ["style"], function() {
+  server.init({
+    server: ".",
+    notify: false,
+    open: true,
+    ui: false
+  });
+
+  gulp.watch("sass/**/*.{scss,sass}", ["style"]);
+  gulp.watch("*.html").on("change", server.reload);
+});
 
 
 gulp.task("images", function() {
