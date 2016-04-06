@@ -14,7 +14,7 @@ var path = require("path");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var svgmin = require("gulp-svgmin");
-var rimraf = require("gulp-rimraf");
+var rimraf = require("rimraf");
 var merge = require("merge-stream");
 var uglify = require("gulp-uglify");
 
@@ -24,7 +24,7 @@ gulp.task("clean", function (cb) {
   rimraf('./build', cb);
 });
 
-gulp.task("style", function() {
+gulp.task("style", ["clean"], function() {
    gulp.src("sass/style.scss")
     .pipe(plumber())
     .pipe(sass())
@@ -51,14 +51,14 @@ gulp.task("style", function() {
     }));
 });
 
-gulp.task("minjs", function() {
+gulp.task("minjs", ["style"], function() {
   return gulp.src("js/*.js")
     .pipe(uglify())
     .pipe(rename("js.min.js"))
     .pipe(gulp.dest("build/js"))
 });
 
-gulp.task("copy", function() {
+gulp.task("copy", ["minjs"], function() {
   var html = gulp.src("*.html")
   .pipe(gulp.dest("build"));
 
@@ -71,10 +71,13 @@ gulp.task("copy", function() {
   var js = gulp.src("js/**/*.js")
   .pipe(gulp.dest("build/js"));
 
-  return merge(html, css, fonts, js);
+  var img = gulp.src("img/**")
+  .pipe(gulp.dest("build/img"));
+
+  return merge(html, css, fonts, js, img);
 });
 
-gulp.task("build", ["clean", "style", "minjs", "copy"], function() {
+gulp.task("build", ["copy"], function() {
 });
 
 gulp.task("serve", ["style"], function() {
