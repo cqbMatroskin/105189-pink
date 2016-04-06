@@ -65,7 +65,7 @@ gulp.task("copy", ["minjs"], function() {
   var css = gulp.src("css/**/*.css")
   .pipe(gulp.dest("build/css"));
 
-  var fonts = gulp.src("fonts/**/*{woff, woff2}")
+  var fonts = gulp.src("fonts/**/*{woff,woff2}")
   .pipe(gulp.dest("build/fonts"));
 
   var js = gulp.src("js/**/*.js")

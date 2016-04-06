@@ -19,9 +19,9 @@
 .social-item__links:active {
   border-color: rgba(40, 54, 69, 0.1);
 
-  .social-item__links--youtube,
-  .social-item__links--twitter,
-  .social-item__links--facebook {
+  .social-item__links-youtube,
+  .social-item__links-twitter,
+  .social-item__links-facebook {
     fill: rgba(210,40,86,0.3);
   }
 }
@@ -29,9 +29,9 @@
   margin: 0;
 }
 
-.social-item__links--youtube,
-.social-item__links--twitter,
-.social-item__links--facebook {
+.social-item__links-youtube,
+.social-item__links-twitter,
+.social-item__links-facebook {
   display: inline-block;
 
   fill: $pink;

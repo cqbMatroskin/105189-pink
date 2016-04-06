@@ -1,11 +1,17 @@
-var btnToggle = document.querySelector('.main-nav__toggle');
-var mobileNav = document.querySelector('.main-nav');
-btnToggle.addEventListener('click', function(event) {
+var btnToggle = document.querySelector(".main-nav__toggle");
+var mobileNav = document.querySelector(".main-nav");
+var closeNav = document.querySelector(".main-nav--closed");
+
+window.onload = function() {
+  closeNav.classList.add("main-nav--js");
+  };
+
+btnToggle.addEventListener("click", function(event) {
   event.preventDefault();
-  btnToggle.classList.toggle('main-nav__toggle--closed');
-  btnToggle.classList.toggle('main-nav__toggle--opened');
-  mobileNav.classList.toggle('main-nav--opened');
-  mobileNav.classList.toggle('main-nav--closed');
+  btnToggle.classList.toggle("main-nav__toggle--closed");
+  btnToggle.classList.toggle("main-nav__toggle--opened");
+  mobileNav.classList.toggle("main-nav--opened");
+  mobileNav.classList.toggle("main-nav--closed");
 });
 
 function initialize() {
@@ -16,7 +22,7 @@ function initialize() {
     scrollwheel: false,
   }
 
-  var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
+  var map = new google.maps.Map(document.getElementById("google-map"), mapOptions);
   var image = "img/icon-map-marker.svg";
   var myLatLng = new google.maps.LatLng(59.936278, 30.320935);
 
@@ -26,4 +32,4 @@ function initialize() {
     icon: image
   });
 }
-google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, "load", initialize);

@@ -1,9 +1,11 @@
 
 @media #{$mobile}, #{$tablet} {
   .main-nav--closed {
+    display: block;
+  }
+  .main-nav--js {
     display: none;
   }
-
   .main-nav--opened {
     display: block;
   }
