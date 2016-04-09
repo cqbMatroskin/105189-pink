@@ -1,6 +1,6 @@
 .tool {
   margin-bottom: 40px;
-  padding-top: 15px;
+  padding-top: 20px;
   padding-bottom: 40px;
 
   background: $bg-gray;
@@ -16,6 +16,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  box-sizing: border-box;
   margin-bottom: 30px;
   padding-top: 45px;
 }
@@ -76,8 +77,9 @@
     @include wrap;
   }
   .tool {
+    margin-bottom: 30px;
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 44px;
   }
   .tool__row {
     display: flex;
@@ -85,7 +87,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 23px;
     padding-bottom: 20px;
 
     border-bottom: 1px solid #dddfe0;
@@ -135,12 +137,37 @@
   .tool {
     @include wrap;
   }
+
   .tool {
     margin-bottom: 90px;
   }
+
+  .tool__wrap-photo {
+    flex-basis: 41%;
+
+    text-align: center;
+  }
+
+  .tool__flex-wrap {
+    justify-content: flex-start;
+    width: 87.33333%;
+  }
+
+  .tool__wrap-instrument {
+    flex-basis: 59%;
+    box-sizing: border-box;
+    padding-left: 77px;
+  }
+
+  .tool__photo {
+    width: 100%;
+    height: 100%;
+  }
   .tool__row {
-    margin-bottom: 10px;
-    padding-bottom: 10px;
+    align-items: flex-start;
+    width: 93%;
+    margin-bottom: 17px;
+    padding-bottom: 0;
   }
   .tool__crop {
     width: 44px;

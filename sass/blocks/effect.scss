@@ -45,23 +45,55 @@
 .effect__link {
   color: $pink;
 }
-
+@media #{$tablet} {
+  .effect {
+    margin-bottom: 48px;
+    padding-top: 59px;
+  }
+  .effect__title {
+    margin-bottom: 10px;
+  }
+  .effect__text {
+    margin-bottom: 10px;
+  }
+}
 @media #{$desktop} {
   .effect {
+    padding-top: 35px;
     padding-bottom: 50px;
 
     background: $bg-gray;
   }
-  .effect__item {
-    flex-basis: 570px;
+  .effect__wrap {
+    justify-content: flex-start;
+    align-items: flex-start;
   }
+  .effect__timer {
+    flex-basis: 39%;
+  }
+  .effect__item {
+    flex-basis: 560px;
+    padding-top: 90px;
+  }
+  .effect__title {
+    margin-bottom: 0;
 
+    line-height: 30px;
+  }
   .effect__title span {
     display: inline;
   }
 
   .effect__text {
+    display: inline-block;
+    margin-bottom: 35px;
+    padding-top: 20px;
+
     font-size: 18px;
-    line-height: 28px;
+    line-height: 30px;
+    span {
+      display: inline-block;
+      width: 100%;
+    }
   }
 }

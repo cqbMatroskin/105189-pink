@@ -20,7 +20,7 @@
 }
 
 .reviews__name {
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 
   font-size: 18px;
   color: $black;
@@ -55,6 +55,9 @@
 }
 
 @media #{$desktop} {
+  .reviews {
+    padding-top: 34px;
+  }
   .reviews__items {
     position: relative;
 
@@ -76,7 +79,7 @@
   }
   .reviews__arrow {
     position: absolute;
-    top: 40%;
+    top: 46%;
     left: 0;
 
     display: block;
@@ -101,6 +104,12 @@
   }
   .reviews__slide {
     align-items: center;
+  }
+  .reviews__subtitle {
+    font-size: 18px;
+  }
+  .reviews__name {
+    font-size: 24px;
   }
   .reviews__text {
     width: 77.6%;

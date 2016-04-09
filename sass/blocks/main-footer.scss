@@ -7,7 +7,7 @@
   @include wrap;
 }
 .footer__logo {
-  margin-bottom: 40px;
+  padding-bottom: 33px;
 
   fill: $base-color;
 }
@@ -67,7 +67,8 @@
     margin-bottom: 0;
   }
   .main-footer__build {
-    align-self: flex-end;
+    align-self: flex-start;
+    padding-top: 10px;
   }
 }
 

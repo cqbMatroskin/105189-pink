@@ -5,9 +5,11 @@
   justify-content: space-around;
   align-items: center;
   margin-bottom: 40px;
+  padding-right: 45px;
+  padding-left: 40px;
 }
 .range-controls__scale {
-  width: 80%;
+  width: 75%;
   height: 2px;
   margin: 0 auto;
 
@@ -16,9 +18,10 @@
 .range-controls__toggle {
   position: absolute;
   top: 50%;
-  left: 73%;
+  left: 80%;
 
-  width: 15px;
+  box-sizing: border-box;
+  width: 14px;
   height: 14px;
 
   background: $bg-gray;
@@ -55,12 +58,13 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    padding-right: 0;
   }
   .range-controls__scale {
     position: static;
     left: 0;
 
-    flex: 0 75%;
+    flex: 0 74%;
     margin-top: 0;
 
     transform: translateX(0);
@@ -70,6 +74,12 @@
   .range-controls__scale--brightness {
     display: block;
   }
+  .range-controls__scale--crop {
+    .range-controls__toggle {
+      left: 75%;
+    }
+  }
+
   .range-controls__scale--color {
     .range-controls__toggle {
       left: 15%;
@@ -78,6 +88,33 @@
   .range-controls__scale--brightness {
     .range-controls__toggle {
       left: 50%;
+    }
+  }
+}
+
+@media #{$desktop} {
+  .range-controls {
+    padding-left: 0;
+  }
+  .range-controls__scale {
+    flex: 1 75%;
+    margin-top: 18px;
+    margin-left: 48px;
+  }
+  .range-controls__scale--crop {
+    .range-controls__toggle {
+      left: 25%;
+    }
+  }
+
+  .range-controls__scale--color {
+    .range-controls__toggle {
+      left: 85%;
+    }
+  }
+  .range-controls__scale--brightness {
+    .range-controls__toggle {
+      left: 55%;
     }
   }
 }

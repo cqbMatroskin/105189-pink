@@ -1,33 +1,51 @@
 .inner-subtitle {
-  padding-top: 45px;
-  padding-bottom: 12px;
+  padding-top: 24px;
+  padding-bottom: 46px;
 
   line-height: 30px;
   text-align: center;
 
   @include wrap;
-  span {
-    display: none;
-  }
+}
+.form-subtitle {
+  padding-bottom: 0;
+}
+
+.hidden-text {
+  display: none;
+}
+.paragraph {
+  display: inline-block;
+  width: 100%;
 }
 @media #{$tablet} {
   .inner-subtitle {
     box-sizing: border-box;
     padding: 0 8%;
     padding-top: 90px;
-    padding-bottom: 45px;
+    padding-bottom: 77px;
 
     font-size: 18px;
     text-align: center;
-    span {
-      display: inline;
-    }
+  }
+  .form-subtitle {
+    padding-bottom: 40px;
+  }
+  .hidden-text {
+    display: inline;
+  }
+  .paragraph {
+    width: auto;
   }
 }
 
 @media #{$desktop} {
   .inner-subtitle {
     padding-right: 7%;
+    padding-bottom: 89px;
     padding-left: 7%;
+  }
+  .form-subtitle {
+    padding-bottom: 7px;
   }
 }

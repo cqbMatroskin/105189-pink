@@ -5,6 +5,9 @@
 @import "global/fonts.scss";
 @import "blocks/scaffolding.scss";
 
+/*-BUTTON-*/
+@import "blocks/btn-transparent.scss";
+@import "blocks/btn.scss";
 
 /*---INDEX.HTML---*/
 @import "blocks/main-header.scss";
@@ -26,9 +29,6 @@
 /*---NAVIGATION---*/
 @import "blocks/main-nav.scss";
 
-/*-BUTTON-*/
-@import "blocks/btn-transparent.scss";
-@import "blocks/btn.scss";
 
 /*-MAP-*/
 @import "blocks/map.scss";

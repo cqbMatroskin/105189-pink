@@ -33,6 +33,7 @@
   left: 0;
   z-index: 1;
 
+  display: block;
   width: 100%;
   height: 11vh;
 
@@ -45,7 +46,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 18px;
 
   font-size: 18px;
   color: $white;
@@ -68,11 +69,11 @@
   left: -25px;
   z-index: 5;
 
-  width: 90px;
-  height: 25px;
+  width: 100px;
+  height: 30px;
 
   font-size: 14px;
-  line-height: 25px;
+  line-height: 30px;
   text-align: center;
   color: $white;
   text-transform: uppercase;
@@ -93,12 +94,15 @@ th {
 
   border-collapse: collapse;
   empty-cells: hide;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 30px;
   text-align: left;
 
   td {
-    padding: 15px;
+    padding-top: 14px;
+    padding-right: 18px;
+    padding-bottom: 14px;
+    padding-left: 20px;
 
     text-transform: uppercase;
 
@@ -110,13 +114,39 @@ th {
   .hide {
     display: none;
   }
+  .table-mobile {
+    position: relative;
+
+    display: block;
+    .icon-yes,
+    .icon-no {
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      transform: translateY(-50%);
+
+      fill: $green;
+    }
+    .icon-no {
+      fill: $red;
+    }
+  }
 }
 @media #{$tablet} {
   .price-list {
     padding-top: 95px;
-    padding-bottom: 15px;
+    padding-bottom: 35px;
+    &:before {
+      content: "";
+
+      height: 8vh;
+    }
   }
   .price__head {
+    padding: 15px 28px;
+    padding-bottom: 5px;
+
     font-size: 16px;
   }
   .price__head span:last-child {
@@ -126,11 +156,18 @@ th {
     background-color: transparent;
     border: 0;
   }
+  .table-mobile {
+    .icon-yes,
+    .icon-no {
+      display: none;
+    }
+  }
   .price__table td {
-    padding: 5px 10px;
+    padding: 7px 10px;
 
     text-transform: capitalize;
   }
+
   .price-list .slider-controls {
     display: none;
   }
@@ -138,21 +175,34 @@ th {
 
 @media #{$desktop} {
   .price-list {
-    padding-top: 125px;
-    padding-bottom: 90px;
+    padding-top: 164px;
+    padding-bottom: 60px;
   }
   .price-list::before {
     content: "";
 
-    height: 26vh;
+    height: 180px;
+  }
+  .col-1 {
+    font-size: 18px;
   }
   .price__head {
+    padding: 17px 28px;
+
     font-size: 18px;
   }
   .price__head span:last-child {
     font-size: 24px;
   }
   .price__table td {
-    padding: 10px;
+    padding: 15px 10px;
+  }
+  .price__table {
+    .col-1 {
+      box-sizing: border-box;
+      width: 236px;
+      padding-right: 0;
+      padding-left: 20px;
+    }
   }
 }

@@ -1,44 +1,11 @@
 .tool-button {
-  padding-top: 40px;
+  padding-top: 34px;
 
   text-align: center;
 
   border-top: 1px solid rgba(40,54,69,0.1);
 }
-.btn-transparent--post {
-  margin-bottom: 15px;
 
-  color: $pink;
-
-  border-color: $pink;
-}
-.btn-transparent--cancel {
-  color: rgba(40,54,69,0.1);
-
-  border-color: rgba(40,54,69,0.1);
-}
-.btn-transparent--post:hover {
-  color: $white;
-
-  background: $pink;
-}
-
-.btn-transparent--post:active {
-  color: rgba(255,255,255,0.3);
-}
-
-.btn-transparent--cancel:hover {
-  color: rgba(40,54,69,0.3);
-
-  border-color: rgba(40,54,69,0.3);
-}
-
-.btn-transparent--cancel:active {
-  color: rgba(255,255,255,0.3);
-
-  background: rgba(40,54,69,0.3);
-  border-color: transparent;
-}
 
 @media #{$tablet} {
   .tool-button {
@@ -46,6 +13,7 @@
     flex-direction: column;
     align-items: center;
     padding: 0;
+    padding-bottom: 21px;
 
     border: 0;
   }
@@ -59,10 +27,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
+    padding-bottom: 10px;
   }
   .btn-transparent--post,
   .btn-transparent--cancel {
-    width: 39.3%;
+    box-sizing: border-box;
+    width: 184px;
     margin-bottom: 0;
   }
 }

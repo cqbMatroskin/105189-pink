@@ -28,7 +28,7 @@
 
 .promo__title {
   margin-bottom: 0;
-  padding-top: 46px;
+  padding-top: 39px;
 
   font-weight: 300;
   font-size: 24px;
@@ -48,6 +48,7 @@
   margin-bottom: 12px;
 
   font-size: 18px;
+  line-height: 24px;
   color: $black;
 }
 .promo__slogan-text {
@@ -58,6 +59,7 @@
   position: absolute;
   bottom: -40px;
 
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -92,10 +94,19 @@
   }
 
   .promo {
-    padding-top: 15px;
-  }
+    padding-top: 12px;
+    &::before {
+      content: "";
 
+      height: 7vh;
+    }
+  }
+  .promo__item {
+    margin-bottom: 40px;
+  }
   .promo__title {
+    padding-top: 52px;
+
     font-size: $tablet-title;
     line-height: 50px;
     span {
@@ -107,7 +118,13 @@
   .promo__items {
     display: flex;
     flex-direction: row-reverse;
-    align-items: center;
+    align-items: flex-start;
+  }
+
+  .promo__item-title {
+    margin-bottom: 20px;
+
+    line-height: 10px;
   }
 
   .promo__list {
@@ -115,7 +132,8 @@
     flex-basis: 51.6%;
     flex-direction: column;
     align-items: center;
-    padding-top: 42px;
+    padding-top: 78px;
+    padding-left: 20px;
   }
   .promo__iphone-wrap {
     flex-basis: 48.4%;
@@ -126,6 +144,10 @@
   .promo__iphone {
     position: static;
     bottom: auto;
+    img {
+      width: 268px;
+      height: 482px;
+    }
   }
   .promo__iphone-1,
   .promo__iphone-2 {
@@ -141,7 +163,7 @@
   .promo::before {
     content: "";
 
-    height: 26vh;
+    height: 180px;
   }
 
   .promo__title {
@@ -171,11 +193,20 @@
   .promo__iphone-2,
   .promo__iphone {
     display: block;
+    flex: 1 33.33333%;
+
+    text-align: center;
+    img {
+      width: 311px;
+    }
   }
 
 
   .promo__iphone {
     margin: 0;
+    img {
+      height: 300px;
+    }
   }
 
   .promo__list {
@@ -185,20 +216,22 @@
     justify-content: space-around;
     align-items: flex-start;
     width: 100%;
+    padding-top: 45px;
+    padding-left: 0;
   }
 
   .promo__item {
-    flex-basis: 255px;
+    flex-basis: 240px;
 
     text-align: center;
   }
 
   .promo__item-title {
     font-size: 30px;
-    line-height: 36px;
+    line-height: 30px;
   }
   .promo__slogan-text {
     font-size: 18px;
-    line-height: 28px;
+    line-height: 30px;
   }
 }

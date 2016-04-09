@@ -51,7 +51,7 @@
       <picture>
         <source media="(min-width: 1200px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
         <source media="(min-width: 700px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
-        <img src="img/iphone-hand-mobile.png" srcset="img/iphone-hand-mobile@2x.png" alt="Iphone">
+        <img src="img/iphone-hand-mobile.png" srcset="img/iphone-hand-mobile@2x.png" width="255" height="284" alt="Iphone">
       </picture>
     </div>
     <section class="application">
@@ -74,7 +74,7 @@
             </svg>
           </a>
         </div>
-        <div>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</div>
+        <div class="application__access">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</div>
       </div>
     </section>
   </header>
@@ -104,14 +104,14 @@
             <picture>
               <source media="(min-width: 1200px)" srcset="img/iphone-screen-desktop-3@1x.png 1x, img/iphone-screen-desktop-3@2x.png 2x">
               <source media="(min-width: 700px)" srcset="img/iphone-screen-tablet-3@1x.png 1x, img/iphone-screen-tablet-3@2x.png 2x">
-              <img src="img/iphone-screen-mobile.png" srcset="img/iphone-screen-mobile@2x.png 2x" alt="Iphone">
+              <img src="img/iphone-screen-mobile.png" srcset="img/iphone-screen-mobile@2x.png 2x"  width="157" height="315" alt="Iphone">
             </picture>
           </div>
           <div class="promo__iphone-2">
-            <img src="img/iphone-screen-desktop_2.png" srcset="img/iphone-screen-desktop-2@1x.png 1x, img/iphone-screen-desktop-2@2x.png 2x" alt="Iphone">
+            <img src="img/iphone-screen-desktop_2.png" srcset="img/iphone-screen-desktop-2@1x.png 1x, img/iphone-screen-desktop-2@2x.png 2x" width="186" height="300" alt="Iphone">
           </div>
           <div class="promo__iphone-1">
-            <img src="img/iphone-screen-desktop_1.png" srcset="img/iphone-screen-desktop-1@1x.png 1x, img/iphone-screen-desktop-1@2x.png 2x" alt="Iphone">
+            <img src="img/iphone-screen-desktop_1.png" srcset="img/iphone-screen-desktop-1@1x.png 1x, img/iphone-screen-desktop-1@2x.png 2x" width="186" height="300" alt="Iphone">
           </div>
         </div>
       </div>
@@ -130,7 +130,7 @@
         <span>Эффект</span> на 24 часа!
       </h4>
         <p class="effect__text">
-          Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+          Британские ученые провели исследования и доказали, <span>что положительный эффект от использования приложения длится целые сутки!</span></p>
         <a class="effect__link" href="#">Узнать больше об исследовании</a>
       </div>
     </div>
@@ -199,7 +199,7 @@
               <span>Стандарт</span>
               <span>3,99 USD</span>
             </div>
-
+          </th>
 
           <th class="col-2 hide">
             <div class="price__head">
@@ -211,55 +211,76 @@
         </thead>
         <tbody>
           <tr>
-            <td class="col-1">Розовый фильтр</td>
+            <td class="col-1">
+              <div class="table-mobile">
+                Розовый фильтр
+                <svg class="icon-yes" width="31" height="21">
+                  <use xlink:href="#icon-yes"></use>
+                </svg>
+              </div>
+            </td>
             <td class="col-2 col-img hide">
-              <svg class="icon-yes" width="30" height="20">
+              <svg class="icon-yes" width="31" height="21">
                 <use xlink:href="#icon-yes"></use>
               </svg>
             </td>
             <td class="col-3 col-img hide">
-              <svg class="icon-yes" width="30" height="20">
+              <svg class="icon-yes" width="31" height="21">
                 <use xlink:href="#icon-yes"></use>
               </svg>
             </td>
             <td class="col-4 col-img hide">
-              <svg class="icon-yes" width="30" height="20">
+              <svg class="icon-yes" width="31" height="21">
                 <use xlink:href="#icon-yes"></use>
               </svg>
             </td>
           </tr>
           <tr>
-            <td class="col-1">Смайлики</td>
+            <td class="col-1">
+              <div class="table-mobile">
+                Смайлики
+                <svg class="icon-yes" width="31" height="21">
+                  <use xlink:href="#icon-yes"></use>
+                </svg>
+              </div>
+            </td>
             <td class="col-2 col-img hide">
-              <svg class="icon-no" width="30" height="20">
+              <svg class="icon-no" width="27" height="26">
                 <use xlink:href="#icon-no"></use>
               </svg>
             </td>
             <td class="col-3 col-img hide">
-              <svg class="icon-yes" width="30" height="20">
+              <svg class="icon-yes" width="31" height="21">
                 <use xlink:href="#icon-yes"></use>
               </svg>
             </td>
             <td class="col-4 col-img hide">
-              <svg class="icon-yes" width="30" height="20">
+              <svg class="icon-yes" width="31" height="21">
                 <use xlink:href="#icon-yes"></use>
               </svg>
             </td>
           </tr>
           <tr>
-            <td class="col-1">Комментарии</td>
+            <td class="col-1">
+              <div class="table-mobile">
+                Комментарии
+                <svg class="icon-no" width="27" height="26">
+                  <use xlink:href="#icon-no"></use>
+                </svg>
+              </div>
+            </td>
             <td class="col-2 col-img hide">
-              <svg class="icon-no" width="30" height="20">
+              <svg class="icon-no" width="27" height="26">
                 <use xlink:href="#icon-no"></use>
               </svg>
             </td>
             <td class="col-3 col-img hide">
-              <svg class="icon-no" width="30" height="20">
+              <svg class="icon-no" width="27" height="26">
                 <use xlink:href="#icon-no"></use>
               </svg>
             </td>
             <td class="col-4 col-img hide">
-              <svg class="icon-yes" width="30" height="20">
+              <svg class="icon-yes" width="31" height="21">
                 <use xlink:href="#icon-yes"></use>
               </svg>
             </td>
@@ -276,8 +297,8 @@
   <section class="contacts">
     <div class="contacts__wrap">
       <h2 class="contacts__title">
-      Остались вопросы? <br>
-      Свяжитесь с нами!
+      Остались вопросы?
+      <span>Свяжитесь с нами!</span>
     </h2>
       <div class="contacts__items-wrap">
         <div class="contacts__items">
