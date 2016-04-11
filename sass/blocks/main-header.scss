@@ -158,10 +158,18 @@
     font-size: $desk-title;
     line-height: 60px;
   }
+  .main-header__wrap--index {
+    width: 48.3%;
+    margin: 0;
+
+    text-align: center;
+  }
   .main-header__title--index {
     box-sizing: border-box;
-    width: 330px;
+    width: 300px;
+    margin: 0 auto;
     margin-bottom: 50px;
+    padding-right: 0;
     padding-left: 0;
   }
   .interview__note-desktop {
