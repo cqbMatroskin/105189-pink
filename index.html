@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <script>
+    // Элемент picture HTML5 shiv
+    document.createElement("picture");
+  </script>
+  <script src="js/picturefill.js" async></script>
 </head>
 
 <body>
@@ -104,7 +109,7 @@
             <picture>
               <source media="(min-width: 1200px)" srcset="img/iphone-screen-desktop-3@1x.png 1x, img/iphone-screen-desktop-3@2x.png 2x">
               <source media="(min-width: 700px)" srcset="img/iphone-screen-tablet-3@1x.png 1x, img/iphone-screen-tablet-3@2x.png 2x">
-              <img src="img/iphone-screen-mobile.png" srcset="img/iphone-screen-mobile@2x.png 2x"  width="157" height="315" alt="Iphone">
+              <img src="img/iphone-screen-mobile.png" srcset="img/iphone-screen-mobile@2x.png 2x" width="157" height="315" alt="Iphone">
             </picture>
           </div>
           <div class="promo__iphone-2">
@@ -184,29 +189,29 @@
       <table class="price__table">
         <thead>
           <tr>
-          <th class="hide"></th>
-          <th class="col-2 hide">
-            <div class="price__head">
-              <span>База</span>
-              <span>1,99 USD</span>
-            </div>
-          </th>
+            <th class="hide"></th>
+            <th class="col-2 hide">
+              <div class="price__head">
+                <span>База</span>
+                <span>1,99 USD</span>
+              </div>
+            </th>
 
 
-          <th class="col-2">
-            <div class="price__head price__hit">
-              <div class="price__hit-label">ХИТ</div>
-              <span>Стандарт</span>
-              <span>3,99 USD</span>
-            </div>
-          </th>
+            <th class="col-2">
+              <div class="price__head price__hit">
+                <div class="price__hit-label">ХИТ</div>
+                <span>Стандарт</span>
+                <span>3,99 USD</span>
+              </div>
+            </th>
 
-          <th class="col-2 hide">
-            <div class="price__head">
-              <span>Анлим</span>
-              <span>9,99 USD</span>
-            </div>
-          </th>
+            <th class="col-2 hide">
+              <div class="price__head">
+                <span>Анлим</span>
+                <span>9,99 USD</span>
+              </div>
+            </th>
           </tr>
         </thead>
         <tbody>
